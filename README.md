@@ -9,18 +9,18 @@ This repository contains the source-code of the official Website of fest.
 As is obviously expected from any website, this shall too suffice the following:-
 
 1) An interactive Event catalogue
-	1.1) Countdown Timer
-	1.2) Event details such as venue and time
-	1.3) Event Coordinator Ping
-	1.4) LeaderBoard
+...1.1) Countdown Timer
+...1.2) Event details such as venue and time
+...1.3) Event Coordinator Ping
+...1.4) LeaderBoard
 
 2) Events' runtime status
 
 Core Contributors:-
 
-1) Aaqa Istyak
-2) Ankit Rai
-3) Shashamk Kumar
-4) Snehil Verma
+Aaqa Istyak
+Ankit Rai
+Shashamk Kumar
+Snehil Verma
 
 Please note that this project is open for contribution from everyone. Perhaps, it is a manifestation of contribution itself. Therefore, a shoutout to those whose work has been incorparated in this project in whatsoever manner.
