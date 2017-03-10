@@ -1,0 +1,67 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8" lang="">
+/[if IE 8] <html class="no-js lt-ie9" lang="">
+/ [if gt IE 8]><!
+%html.no-js{:lang => ""}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "css/normalize.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/main.css", :rel => "stylesheet"}/
+    %script{:src => "js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"}
+  %body
+    /[if lt IE 8]
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    .header-container
+      %header.wrapper.clearfix
+        %h1.title h1.title
+        %nav
+          %ul
+            %li
+              %a{:href => "#"} nav ul li a
+            %li
+              %a{:href => "#"} nav ul li a
+            %li
+              %a{:href => "#"} nav ul li a
+    .main-container
+      .main.wrapper.clearfix
+        %article
+          %header
+            %h1 article header h1
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.
+          %section
+            %h2 article section h2
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.
+          %section
+            %h2 article section h2
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.
+          %footer
+            %h3 article footer h3
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.
+        %aside
+          %h3 aside
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.
+      / #main
+    / #main-container
+    .footer-container
+      %footer.wrapper
+        %h3 footer
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"}
+    :javascript
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    %script{:src => "js/plugins.js"}
+    %script{:src => "js/main.js"}
+    / Google Analytics: change UA-XXXXX-X to be your site's ID.
+    :javascript
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X','auto');ga('send','pageview');
