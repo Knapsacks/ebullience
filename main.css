@@ -251,7 +251,9 @@
 	}
 }
 /*End of Preloader, do not code above this*/
-
+#Landing{
+	display: none;
+}
 body {
   font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #79a8ae;
@@ -475,4 +477,18 @@ body,
 
 .touch .ui-input {
   display: none;
+}
+/*After landing page animations*/
+#registerbox{
+	position: absolute;
+	display: none;
+	margin-top: auto;
+	margin-left: auto;
+	align-self: center;
+	justify-content: center;
+	width: 35%;
+	height: 35%;
+	background-color: f2f2f2;
+	border: 1px solid white;
+	border-radius: 2px;
 }
