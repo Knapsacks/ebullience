@@ -251,7 +251,9 @@
 	}
 }
 /*End of Preloader, do not code above this*/
-
+#Landing{
+	display: none;
+}
 body {
   font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #79a8ae;

@@ -1,6 +1,7 @@
 
 
 // countdown
+var day, hour, minute;
 var deadline = 'March 24 2017 08:00:00 GMT+0530';
 function getTimeRemaining(deadline){
   var t = Date.parse(deadline) - Date.parse(new Date());
@@ -16,8 +17,21 @@ function getTimeRemaining(deadline){
     'seconds': seconds
   };
 }
-var t = Date.parse(deadline) - Date.parse(new Date());
-
+if(getTimeRemaining(deadline).days>1){
+  day = 'days';
+} else {
+  day = 'day';
+}
+if(getTimeRemaining(deadline).hours>1){
+  hour = 'hours';
+} else {
+  hour = 'hour';
+}
+if(getTimeRemaining(deadline).minutes>1){
+  minute = 'minutes';
+} else {
+  minute = 'minute';
+}
 // countdown
 
 var S = {
@@ -31,7 +45,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('EBULLIENCE | 2k17 | '+getTimeRemaining(deadline).days+' Days | '+getTimeRemaining(deadline).hours+' Hour | '+getTimeRemaining(deadline).minutes+' Minutes | Remaining | Register Now | ');
+      S.UI.simulate('EBULLIENCE | 2k17 | '+getTimeRemaining(deadline).days+' '+day+' | '+getTimeRemaining(deadline).hours+' '+hour+' | '+getTimeRemaining(deadline).minutes+' '+minute+' | REMAINING | ');
     }
     S.Drawing.loop(function () {
       S.Shape.render();
@@ -623,4 +637,4 @@ S.Shape = (function () {
     }
   }
 }());
-S.init();
+
