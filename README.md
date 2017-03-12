@@ -4,7 +4,7 @@ EBULLIENCE 2k17 - The annual Tech Fest
 
 This repository contains the source-code of the official Website of fest.
 
-<-~ WebSite Features ~->
+<-~ Website Features ~->
 
 As is obviously expected from any website, this shall too suffice the following:-
 
@@ -18,6 +18,8 @@ As is obviously expected from any website, this shall too suffice the following:
 
 ...1.4) LeaderBoard
 
+...1.5) Google oauth log-in 
+
 2) Events' runtime status
 
 Core Contributors:-
@@ -26,7 +28,7 @@ Aaqa Ishtyaq
 
 Ankit Rai
 
-Shashamk Kumar
+Shashank Kumar
 
 Snehil Verma
 
