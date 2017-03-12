@@ -64,7 +64,7 @@ S.Drawing = (function () {
                      window.oRequestAnimationFrame      ||
                      window.msRequestAnimationFrame     ||
                      function(callback) {
-                       window.setTimeout(callback, 1000 / 60);
+                       window.setTimeout(callback, 1000 / 40);
                      };
 
   return {
@@ -229,7 +229,7 @@ S.UI = (function () {
         default:
           S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
       }
-    }, 2000, sequence.length);
+    }, 2750, sequence.length);
   }
 
  
