@@ -45,7 +45,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('EBULLIENCE | 2k17 | '+getTimeRemaining(deadline).days+' '+day+' | '+getTimeRemaining(deadline).hours+' '+hour+' | '+getTimeRemaining(deadline).minutes+' '+minute+' | REMAINING | ');
+      S.UI.simulate('EBULLIENCE | 2k17 | '+getTimeRemaining(deadline).days+' '+day+' | '+getTimeRemaining(deadline).hours+' '+hour+' | '+getTimeRemaining(deadline).minutes+' '+minute+' | REMAINING | LOGIN NOW ');
     }
     S.Drawing.loop(function () {
       S.Shape.render();
@@ -86,8 +86,8 @@ S.Drawing = (function () {
     },
 
     adjustCanvas: function () {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth-20;
+      canvas.height = window.innerHeight-12;
     },
 
     clearFrame: function () {
@@ -303,7 +303,7 @@ S.Dot = function (x, y) {
 
   this.e = 0.07;
   this.s = true;
-    this.c = new S.Color(255, 255, 255, this.p.a);
+  this.c = new S.Color(255, 255, 255, this.p.a);
   this.t = this.clone();
   this.q = [];
 };
@@ -405,7 +405,7 @@ S.ShapeBuilder = (function () {
   var gap = 13,
       shapeCanvas = document.createElement('canvas'),
       shapeContext = shapeCanvas.getContext('2d'),
-      fontSize = 500,
+      fontSize = 700,
       fontFamily = 'Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
 
   function fit() {
