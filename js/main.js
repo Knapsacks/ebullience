@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	
+	//index.html
+
 	setTimeout(preloader_magic, 4000);
 	//setTimeout(flyby, 21775);
 	setTimeout(show_login, 21775);
@@ -19,6 +22,16 @@ $(document).ready(function(){
 	}
 	function show_login(){
 		$('#login_button').fadeIn('slow');
+	}
+
+	//events.html
+
+	setTimeout(load_event_page, 4000);
+	function load_event_page(){
+		$('#user_image').fadeIn('slow', function(){
+			$('#Profile').addClass('move_profile');
+			$('#Profile').removeClass('profile_load');
+		});
 	}
 });
 
