@@ -50,14 +50,17 @@ if ($gClient->getAccessToken()) {
 <head>
 	<title>Ebullience 2k17</title>
 	<style type="text/css">
+	body {
+		background-color: #397bf9; 
+		}
 	#profile {
     	border-radius: 5px;
-    	background-color: #f2f2f2;
+    	background-color: #cbebdb;
     	padding: 10px;
-    	width: 50%;
+    	width: 60%;
     	margin: auto;
     	z-index: 10;
-    	border: 3px blue solid;
+    	border: 2px #0f9d58 solid;
 }
 	</style>
 </head>
