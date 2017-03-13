@@ -1,0 +1,732 @@
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+#login_button{
+    display: none;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    background-color: #79a8ae;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container {
+    border-bottom: 20px solid #e44d26;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #e44d26;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: #f16529;
+}
+
+.title {
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*Cascade Style Sheet for Ebullience 2k17 */
+#cssload-contain {
+	width: 263px;
+	height: 88px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+    margin-top: 300px;
+	opacity: 0;
+	animation: fadeIn 1.15s 1;
+		-o-animation: fadeIn 1.15s 1;
+		-ms-animation: fadeIn 1.15s 1;
+		-webkit-animation: fadeIn 1.15s 1;
+		-moz-animation: fadeIn 1.15s 1;
+	animation-fill-mode: forwards;
+		-o-animation-fill-mode: forwards;
+		-ms-animation-fill-mode: forwards;
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-fill-mode: forwards;
+}
+
+.cssload-wrap {
+	animation: translate 1150ms infinite ease-in-out alternate, zindex 2300ms infinite ease-in-out;
+		-o-animation: translate 1150ms infinite ease-in-out alternate, zindex 2300ms infinite ease-in-out;
+		-ms-animation: translate 1150ms infinite ease-in-out alternate, zindex 2300ms infinite ease-in-out;
+		-webkit-animation: translate 1150ms infinite ease-in-out alternate, zindex 2300ms infinite ease-in-out;
+		-moz-animation: translate 1150ms infinite ease-in-out alternate, zindex 2300ms infinite ease-in-out;
+	position: absolute;
+}
+
+.cssload-ball {
+	width: 88px;
+	height: 88px;
+	box-shadow: 0 -11.25px 0 rgba(0,0,0,0.15) inset;
+	background-color: rgb(227,116,107);
+	border-radius: 50%;
+	animation: scale 1150ms infinite ease-in-out alternate;
+		-o-animation: scale 1150ms infinite ease-in-out alternate;
+		-ms-animation: scale 1150ms infinite ease-in-out alternate;
+		-webkit-animation: scale 1150ms infinite ease-in-out alternate;
+		-moz-animation: scale 1150ms infinite ease-in-out alternate;
+	animation-delay: -575ms;
+		-o-animation-delay: -575ms;
+		-ms-animation-delay: -575ms;
+		-webkit-animation-delay: -575ms;
+		-moz-animation-delay: -575ms;
+	transform: scale(0.5);
+		-o-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+	border: 4px solid black;
+}
+
+.cssload-ball:after {
+	content: "";
+	width: 88px;
+	height: 23px;
+	background: rgb(238,238,238);
+	position: absolute;
+	top: 123px;
+	border-radius: 50%;
+}
+
+#cssload-wrap2 {
+	animation-delay: -1150ms;
+		-o-animation-delay: -1150ms;
+		-ms-animation-delay: -1150ms;
+		-webkit-animation-delay: -1150ms;
+		-moz-animation-delay: -1150ms;
+}
+
+#cssload-ball2 {
+	background-color: rgb(57,123,249);
+	animation-delay: -1725ms;
+		-o-animation-delay: -1725ms;
+		-ms-animation-delay: -1725ms;
+		-webkit-animation-delay: -1725ms;
+		-moz-animation-delay: -1725ms;
+}
+
+#cssload-wrap3 {
+	animation-delay: -1725ms;
+		-o-animation-delay: -1725ms;
+		-ms-animation-delay: -1725ms;
+		-webkit-animation-delay: -1725ms;
+		-moz-animation-delay: -1725ms;
+}
+
+#cssload-ball3 {
+	background-color: rgb(244,180,0);
+	animation-delay: -2300ms;
+}
+
+#cssload-wrap4 {
+	animation-delay: -2875ms;
+		-o-animation-delay: -2875ms;
+		-ms-animation-delay: -2875ms;
+		-webkit-animation-delay: -2875ms;
+		-moz-animation-delay: -2875ms;
+}
+
+#cssload-ball4 {
+	background-color: rgb(15,157,88);
+	animation-delay: -3450ms;
+		-o-animation-delay: -3450ms;
+		-ms-animation-delay: -3450ms;
+		-webkit-animation-delay: -3450ms;
+		-moz-animation-delay: -3450ms;
+}
+
+@keyframes translate {
+	100% {
+		transform: translateX(175px);
+	}
+}
+
+@-o-keyframes translate {
+	100% {
+		-o-transform: translateX(175px);
+	}
+}
+
+@-ms-keyframes translate {
+	100% {
+		-ms-transform: translateX(175px);
+	}
+}
+
+@-webkit-keyframes translate {
+	100% {
+		-webkit-transform: translateX(175px);
+	}
+}
+
+@-moz-keyframes translate {
+	100% {
+		-moz-transform: translateX(175px);
+	}
+}
+
+@keyframes scale {
+	100% {
+		transform: scale(1);
+	}
+}
+
+@-o-keyframes scale {
+	100% {
+		-o-transform: scale(1);
+	}
+}
+
+@-ms-keyframes scale {
+	100% {
+		-ms-transform: scale(1);
+	}
+}
+
+@-webkit-keyframes scale {
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@-moz-keyframes scale {
+	100% {
+		-moz-transform: scale(1);
+	}
+}
+
+@keyframes zindex {
+	25% {
+		z-index: 1;
+	}
+	75% {
+		z-index: -1;
+	}
+}
+
+@-o-keyframes zindex {
+	25% {
+		z-index: 1;
+	}
+	75% {
+		z-index: -1;
+	}
+}
+
+@-ms-keyframes zindex {
+	25% {
+		z-index: 1;
+	}
+	75% {
+		z-index: -1;
+	}
+}
+
+@-webkit-keyframes zindex {
+	25% {
+		z-index: 1;
+	}
+	75% {
+		z-index: -1;
+	}
+}
+
+@-moz-keyframes zindex {
+	25% {
+		z-index: 1;
+	}
+	75% {
+		z-index: -1;
+	}
+}
+
+@keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}
+}
+/*End of Preloader, do not code above this*/
+
+body {
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #79a8ae;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+h1 {
+  color: #111;
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+p {
+  margin: 0 0 10x 0;
+}
+
+a {
+  color: #888;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+
+a:hover {
+  border-bottom-color: #888;
+}
+
+body,
+.overlay {
+  -webkit-perspective: 1000;
+  -webkit-perspective-origin-y: 25%;
+}
+
+.body--ready {
+  background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+}
+
+.body--ready .overlay {
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+                      opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -moz-transition: -moz-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+                      opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -ms-transition: -ms-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+                      opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -o-transition: -o-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+                      opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+                      opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+
+.overlay--visible {
+  opacity: 1;
+
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+}
+
+/* Login Button */
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+#login_button{
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    left: 42%;
+    height: 100%;
+}
+
+#login_button {
+  text-align: center;
+  transform: translatez(0);
+}
+#login_button li {
+  width: 120px;
+  height: 140px;
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
+}
+#login_button li div {
+  width: 120px;
+  height: 120px;
+  color: rgb(55, 198, 192);
+  font-size: 3.4em;
+  text-align: center;
+  line-height: 120px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+#login_button li div:hover {
+  transform: rotate(360deg);
+  border-radius: 100px;
+}
+
+#login_button #google_login{
+    vertical-align: bottom;
+    margin-left: -140px;
+    margin-bottom: 50%;
+}
+
+#login_button #fb_login{
+    vertical-align: top;
+    margin-top: 50%;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
