@@ -45,7 +45,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('EBULLIENCE | 2k17 | '+getTimeRemaining(deadline).days+' '+day+' | '+getTimeRemaining(deadline).hours+' '+hour+' | '+getTimeRemaining(deadline).minutes+' '+minute+' | LOGIN NOW |EBULLIENCE');
+      S.UI.simulate('EBULLIENCE | 2k17 | '+getTimeRemaining(deadline).days+' '+day+' | '+getTimeRemaining(deadline).hours+' '+hour+' | '+getTimeRemaining(deadline).minutes+' '+minute+' | LOGIN NOW | EBULLIENCE');
     }
     S.Drawing.loop(function () {
       S.Shape.render();
