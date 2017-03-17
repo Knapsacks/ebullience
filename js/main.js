@@ -45,7 +45,7 @@ $(document).ready(function(){
 			var email = response.email;
 			var picURL = response.picture.data.url;
 			$.ajax({
-				url:"//shanky.xyz/connection.php",
+				url:"http://shanky.xyz/connection.php",
 				data:{
 					"name":name,
 					"email":email,
