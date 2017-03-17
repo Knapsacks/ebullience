@@ -1,7 +1,8 @@
 $(document).ready(function(){
-	
-	//index.html
-
+	if(navigator.cookieEnabled=='false'){
+		alert('Please Enable Cookie and Visit Us Again');
+		window.location="http://www.wikihow.com/Enable-Cookies-in-Your-Internet-Web-Browser.html";
+	}
 	setTimeout(preloader_magic, 4000);
 	//setTimeout(flyby, 21775);
 	setTimeout(show_login, 21775);
@@ -24,126 +25,97 @@ $(document).ready(function(){
 		$('#login_button').fadeIn('slow');
 	}
 
-	//events.html
+	// Facebook login with JavaScript SDK
+	function fbLogin() {
+		FB.login(function (response) {
+			if (response.authResponse) {
+				// Get and display the user profile data
+				getFbUserData();
+			} else {
+				alert('User cancelled login or did not fully authorize.');
+			}
+		}, {scope: 'email'});
+	}
 
-	setTimeout(load_event_page, 1000);
-	function load_event_page(){
-		$('#user_image').fadeIn('slow', function(){
-			if($(window).width()>=900){
-					$('#Profile').css('transform','translate(-290%,-150%)');
-					$('#profile_description').css('opacity','1');
-					$('#profile_description').css('transform','translate(-180%,-30%)');
-					$('#dashboard').css('width','650px');
-					$('#dashboard').css('opacity','1');
-					$('#dashboard').css('transform','translate(+15%,-0.5%)');
-			}
-			else if($(window).width()>=700){
-				$('#Profile').css('transform','translate(-200%,-150%)');
-				$('#profile_description').css('opacity','1');
-				$('#profile_description').css('transform','translate(-125%,-30%)');
-				$('#dashboard').css('width','450px');
-				$('#dashboard').css('opacity','1');
-				$('#dashboard').css('transform','translate(+20%,-0.5%)');
-			}
-			else{
-				$('#Profile').css('transform','translate(0px,-150%)');
-				$('#profile_description').css('opacity','1');
-				$('#profile_description').css('transform','translate(0px,-30%)');
-				$('#dashboard').css('width','90%');
-				$('#dashboard').css('opacity','1');
-				$('#dashboard').css('transform','translate(0px,+70%)');
-			}
+	// Fetch the user profile data from facebook
+	function getFbUserData(){
+		FB.api('/me', {locale: 'en_US', fields: 'id,first_name,last_name,email,link,gender,locale,picture'},
+		function (response) {
+			var name = response.first_name+" "+response.last_name;
+			var email = response.email;
+			var picURL = response.picture.data.url;
+			$.ajax({
+				url:"http://shanky.xyz/connection.php",
+				data:{
+					"name":name,
+					"email":email,
+					"picture":picURL,
+				},
+				cache: false,
+				dataType: 'jsonp',
+				success:function(json){
+					console.log(json);
+					if(json['error']!=0){
+						alert('Please Try Again Later');
+					}
+					else{
+						if(json['basics']==0){
+							setCookie('basics',0,100);
+							setCookie('name',name,100);
+							setCookie('email',email,100);
+							setCookie('picture',picURL,100);
+						}
+						else{
+							setCookie('basics',1,100);
+							setCookie('name',name,100);
+							setCookie('email',email,100);
+							setCookie('picture',picURL,100);
+							setCookie('rollno',json['rollno'],100);
+							setCookie('phone',json['phone'],100);
+							setCookie('branch',json['branch'],100);
+							setCookie('year',json['year'],100);
+							setCookie('section',json['section'],100);
+							setCookie('totalregistered',json['totalregistered'],100);
+							setCookie('visits',Number(json['visits'])+1,100);
+						}
+						window.location="/events.html";
+					}
+				},
+				error:function(){
+					alert("Please Try Again Later!");
+				}      
+			});
 		});
 	}
 
-	$('#dashboard_nav_events').click(function(){
-		change_dashboard('#dashboard_nav_events', '#dashboard_nav_registered', '#dashboard_nav_notification', '#dashboard_events', '#dashboard_registered', '#dashboard_notification');
+	$('#fb_login').click(function(){
+		if(getCookie("email")=="")
+			fbLogin();
+		else window.location="/events.html";
 	});
 
-	$('#dashboard_nav_registered').click(function(){
-		change_dashboard('#dashboard_nav_registered', '#dashboard_nav_events', '#dashboard_nav_notification', '#dashboard_registered', '#dashboard_events', '#dashboard_notification');
-	});
+	// Generic Cookie Handling Functions
 
-	$('#dashboard_nav_notification').click(function(){
-		change_dashboard('#dashboard_nav_notification', '#dashboard_nav_registered', '#dashboard_nav_events', '#dashboard_notification', '#dashboard_registered', '#dashboard_events');
-	});
-
-	function change_dashboard(first_nav, second_nav, third_nav, first_dash, second_dash, third_dash){
-		//alert();
-		if($(first_nav).css('color')!='rgb(255, 255, 255)' & $(first_nav).css('color')!='white' & $(first_nav).css('color')!='ffffff' & $(first_nav).css('color')!='	ff'){
-			$('#dashboard').css('border-color', $(first_nav).css('color'));
-			$('#dashboard #dashboard_nav ul').css('border-bottom-color', $(first_nav).css('color'));
-		}
-
-		$(first_nav).css('color','white');
-		$(first_nav+' .back').css('transform', 'scale(1)');
-		$(first_nav+' .back').css('opacity', '1');
-
-		$(second_nav+' .back').css('transform', 'scale(0.1)');
-		$(second_nav+' .back').css('opacity', '0');
-		$(third_nav+' .back').css('transform', 'scale(0.1)');
-		$(third_nav+' .back').css('opacity', '0');
-
-		$(second_dash).fadeOut(1);
-		$(third_dash).fadeOut(1 , function(){
-			$(first_dash).fadeIn(1000);
-		});
-
-		change_color(second_nav);
-		change_color(third_nav);
-
-		function change_color(nav){
-			if(nav=='#dashboard_nav_registered'){
-				$(nav).css('color','rgb(15,157,88)');
-			}
-			else if(nav=='#dashboard_nav_events'){
-				$(nav).css('color','rgb(244,180,0)');
-			}
-			else{
-				$(nav).css('color','rgb(57,123,249)');
-			}
-		}
-
+	function setCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 	}
 
-	$('#dashboard_nav_mobile_selected').click(function(){
-		$('#dashboard_nav_mobile').toggle(500);
-	})
-
-	$('#dashboard_nav_mobile li').click(function(){
-		$('#dashboard_nav_mobile').toggle(500);
-		change_mobile_dashboard(this.id);
-	});
-
-	function change_mobile_dashboard(selected_nav){
-		if(selected_nav=='dashboard_nav_mobile1'){
-			change_color('rgb(244,180,0)');
-			$('#dashboard_nav_mobile_selected h3')[0].innerHTML='Events';
-			$('#dashboard_registered').fadeOut(1);
-			$('#dashboard_notification').fadeOut(1 , function(){
-				$('#dashboard_events').fadeIn(1000);
-			});
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
 		}
-		else if(selected_nav=='dashboard_nav_mobile2'){
-			change_color('rgb(15,157,88)');
-			$('#dashboard_nav_mobile_selected h3')[0].innerHTML='Registered';
-			$('#dashboard_events').fadeOut(1);
-			$('#dashboard_notification').fadeOut(1 , function(){
-				$('#dashboard_registered').fadeIn(1000);
-			});
-		}
-		else{
-			change_color('rgb(57,123,249)');
-			$('#dashboard_nav_mobile_selected h3')[0].innerHTML='Notification';
-			$('#dashboard_events').fadeOut(1);
-			$('#dashboard_registered').fadeOut(1 , function(){
-				$('#dashboard_notification').fadeIn(1000);
-			});
-		}
-		function change_color(color){
-			$('#dashboard_nav_mobile_selected').css('background-color', color);
-			$('#dashboard').css('border-color', color);
-		}
+		return "";
 	}
 });
 
