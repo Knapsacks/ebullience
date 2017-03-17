@@ -29,7 +29,7 @@ $(document).ready(function(){
             $('#basic_details_form #rollno').on("focus blur",function(){
                 if($('#basic_details_form #rollno')[0].value!=''){
                     $.ajax({
-                        url:"http://shanky.xyz/checkrollno.php",
+                        url:"//shanky.xyz/checkrollno.php",
                         data:{
                             "rollno":$('#basic_details_form #rollno')[0].value,
                         },
@@ -60,7 +60,7 @@ $(document).ready(function(){
             $("#basic_details_form").submit(function(event) {
                 var formdata=$('#basic_details_form').serializeArray();
                 $.ajax({
-                        url:"http://shanky.xyz/checkrollno.php",
+                        url:"//shanky.xyz/checkrollno.php",
                         data:{
                             "rollno":$('#basic_details_form #rollno')[0].value,
                         },
@@ -78,7 +78,7 @@ $(document).ready(function(){
                                 }
                                 else{
                                     $.ajax({
-                                        url:"http://shanky.xyz/submitbasics.php",
+                                        url:"//shanky.xyz/submitbasics.php",
                                         data: {
                                           "email": getCookie("email"),
                                           "phone": formdata[0].value,
