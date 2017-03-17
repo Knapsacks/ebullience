@@ -253,7 +253,7 @@ $(document).ready(function(){
     }
     else{
         alert("Please Login First!");
-        window.location="/";
+        window.location="/ebullience/";
     }
 
     // Generic Cookie Handling Functions

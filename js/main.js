@@ -78,7 +78,7 @@ $(document).ready(function(){
 							setCookie('totalregistered',json['totalregistered'],100);
 							setCookie('visits',Number(json['visits'])+1,100);
 						}
-						window.location="/events.html";
+						window.location="/ebullience/events.html";
 					}
 				},
 				error:function(){
@@ -91,7 +91,7 @@ $(document).ready(function(){
 	$('#fb_login').click(function(){
 		if(getCookie("email")=="")
 			fbLogin();
-		else window.location="/events.html";
+		else window.location="/ebullience/events.html";
 	});
 
 	// Generic Cookie Handling Functions
