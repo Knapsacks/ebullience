@@ -1,0 +1,110 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/events.css">
+    </head>
+<body>
+	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <canvas></canvas>
+
+    <div id="Profile" class="profile_load">
+        <img id="user_image" src=""/>
+    </div>
+
+    <div id="profile_description">
+        <div></div>
+        <ul>
+            <li id="profile_description_name"></li>
+            <li id="profile_description_email"></li>
+            <li id="profile_description_phone">Phone Number</li>
+            <li id="profile_description_branch">Branch</li>
+            <li id="profile_description_section">Section</li>
+            <li id="profile_description_year">Year</li>
+            <li id="profile_description_registered">0 Registered Events</li>
+        </ul>
+    </div>
+
+    <div id="dashboard">
+        <div id="dashboard_nav">
+            <ul>
+                <li id="dashboard_nav_events"><h3><div class="back"></div>Events</h3></li>
+                <li id="dashboard_nav_registered"><h3><div class="back"></div>Registered</h3></li>
+                <li id="dashboard_nav_notification"><h3><div class="back"></div>Notification</h3></li>
+            </ul>
+        </div>
+        <div id="dashboard_nav_mobile">
+            <ul>
+                <li id="dashboard_nav_mobile1"><h3 id="dashboard_nav_events2">Events</h3></li>
+                <li id="dashboard_nav_mobile2"><h3 id="dashboard_nav_registered2">Registered</h3></li>
+                <li id="dashboard_nav_mobile3"><h3 id="dashboard_nav_notification2">Notification</h3></li>
+            </ul>
+        </div>
+        <div id="dashboard_nav_mobile_selected">
+            <h3 id="dashboard_nav_events2">Events</h3>
+            <img src="img/chevron.svg"></div>
+        <div id="dashboard_events" class="dashboard_desc">
+            <h3></h3>
+        </div>
+        <div id="dashboard_registered" class="dashboard_desc">
+            <h3>Registered Events Goes Here</h3>
+        </div>
+        <div id="dashboard_notification" class="dashboard_desc">
+            <h3>Notification Goes Here</h3>
+        </div>
+    </div>
+
+    <div id="basic_details">
+        <form id="basic_details_form" class="topBefore">
+        
+          <label for="phone"><h3>Enter Your Phone Number</h3></label>
+		  <input id="phone" type="text" name="phone" required>
+
+          <label for="rollno"><h3>Enter Your Roll Number</h3></label>
+		  <input id="rollno" type="number" name="rollno" required>
+
+          <label for="branch"><h3>Select Your Branch</h3></label>
+          <select id="branch" name="branch" required></select>
+
+          <label for="year"><h3>Select Section</h3></label>
+          <select id="section" name="section" required></select>
+
+          <label for="year"><h3>Select Year</h3></label>
+          <select id="year" name="year" required></select>
+
+          <input id="submit" type="submit" value="GO!">
+        </form>
+    </div>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.js"
+	  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+	  crossorigin="anonymous"></script>
+    <script src='js/zepto.min.js'></script>
+	<script type="text/javascript" src="js/events.js"></script>
+	<script type="text/javascript" src="js/forevent.js"></script>
+
+	<!-- Google Analytics Script -->
+	<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-67861202-8', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
