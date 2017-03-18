@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-=======
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
 }
 
-<<<<<<< HEAD
-=======
 /*internet explorer scrollbalken*/
 body{
   scrollbar-base-color: #C0C0C0;
@@ -74,7 +69,6 @@ scrollbar[orient="vertical"] {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
 #login_button{
     display: none;
 }
@@ -226,10 +220,6 @@ nav a:hover {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-<<<<<<< HEAD
-
-@import url('https://fonts.googleapis.com/css?family=Dosis:300,400');
-=======
 h1, h2, h3, h4, h5, h6, div, p{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -239,7 +229,6 @@ h3{
     margin-top: 5px;
     margin-bottom: 5px;
 }
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
 
 /* Canvas */
 
@@ -267,11 +256,8 @@ canvas {
 
 #Profile img {
   border-radius: 120px;
-<<<<<<< HEAD
-=======
   width: 100%;
   height: 100%;
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
   -webkit-filter: grayscale(0.7);
   -moz-filter: grayscale(0.7);
   -ms-filter: grayscale(0.7);
@@ -328,19 +314,12 @@ canvas {
   position: absolute;
   margin: auto;
   top: 0; right: 0; left: 0; bottom: 0;
-<<<<<<< HEAD
-  width: 180px; height: 310px;
-=======
   width: 180px; height: 370px;
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
   border: 3px solid black;
   color: black;
   padding: 5px;
   background-color: white;
-<<<<<<< HEAD
-=======
   word-wrap: break-word;
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -357,13 +336,10 @@ canvas {
     padding: 0;
 }
 
-<<<<<<< HEAD
-=======
 #profile_description li {
     border-bottom: 1px solid black;
 }
 
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
 #dashboard{
   position: absolute;
   margin: auto;
@@ -464,13 +440,9 @@ canvas {
 
 .dashboard_desc{
     padding: 5px;
-<<<<<<< HEAD
-    text-align: center;
-=======
     height: 400px;
     text-align: justify;
     overflow: auto;
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
 }
 
 #dashboard_notification, #dashboard_registered{
@@ -500,11 +472,7 @@ canvas {
     list-style: none;
     position: absolute;
     width: 90%;
-<<<<<<< HEAD
-    height: 195px;
-=======
     height: 115px;
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
     left: 5%;
     top: 60px;
     z-index: 1;
@@ -540,11 +508,7 @@ canvas {
 
 #dashboard_nav_mobile_selected img{
     position: absolute;
-<<<<<<< HEAD
-    margin-top: -20px;
-=======
     margin-top: -5px;
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
     margin-left: -10px;
     width: 20px;
     height: 20px;
@@ -554,8 +518,6 @@ canvas {
   transition: all 1s ease-in-out;
 }
 
-<<<<<<< HEAD
-=======
 #basic_details{
   position: absolute;
   margin: auto;
@@ -595,7 +557,6 @@ canvas {
 
 
 
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
 /* ==========================================================================
    Media Queries
    ========================================================================== */

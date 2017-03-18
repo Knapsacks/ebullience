@@ -1,11 +1,8 @@
 $(document).ready(function(){
-<<<<<<< HEAD
-=======
 	if(navigator.cookieEnabled=='false'){
 		alert('Please Enable Cookie and Visit Us Again');
 		window.location="http://www.wikihow.com/Enable-Cookies-in-Your-Internet-Web-Browser.html";
 	}
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
 	setTimeout(preloader_magic, 4000);
 	//setTimeout(flyby, 21775);
 	setTimeout(show_login, 21775);
@@ -27,8 +24,6 @@ $(document).ready(function(){
 	function show_login(){
 		$('#login_button').fadeIn('slow');
 	}
-<<<<<<< HEAD
-=======
 
 	// Facebook login with JavaScript SDK
 	function fbLogin() {
@@ -122,6 +117,5 @@ $(document).ready(function(){
 		}
 		return "";
 	}
->>>>>>> ee419351bea883a4a8331458a5d60b0c8fcc1c0d
 });
 
