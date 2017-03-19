@@ -13,12 +13,6 @@ window.fbAsyncInit = function() {
     });
     
     // Check whether the user already logged in
-	FB.getLoginStatus(function(response) {
-		if (response.status === 'connected') {
-			//display user data
-			getFbUserData();
-		}
-	});
 };
 
 // Load the JavaScript SDK asynchronously
