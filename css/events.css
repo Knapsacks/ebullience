@@ -541,7 +541,8 @@ canvas {
 }
 
 #basic_details #submit{
-    margin-top: 10px;
+    width: 70%;
+    margin-top: 30px;
 }
 
 #logout_button{
@@ -576,6 +577,21 @@ canvas {
 }
 
 
+#techfooter{
+    position: fixed;
+    margin: auto;
+    right: 0; left: 0; bottom: 3px;
+    width: 100%; height: 9%;
+    padding: 3px;
+    color:white;
+    opacity: 0.8;
+    background-color: #454545;
+    word-wrap: break-word;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
 
 /* ==========================================================================
    Media Queries
