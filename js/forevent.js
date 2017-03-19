@@ -207,7 +207,7 @@ $(document).ready(function(){
 
                 $(second_dash).fadeOut(1);
                 $(third_dash).fadeOut(1 , function(){
-                    $(first_dash).fadeIn(1000);
+                    $(first_dash).fadeIn(1);
                 });
 
                 change_color(second_nav);
