@@ -1,0 +1,7 @@
+{
+    "branch": ["CSE", "IT", "ME", "EC", "CHEM", "CIVIL","MCA", "EN", "BIO", "MBA", "PHARMACY", "COMMON"],
+
+    "year": ["FIRST", "SECOND" ,"THIRD" ,"FOURTH"],
+
+    "section": ["A", "B", "C", "D", "E"]
+}
