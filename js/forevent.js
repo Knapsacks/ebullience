@@ -133,6 +133,14 @@ $(document).ready(function(){
             $('#profile_description_year')[0].innerHTML=getCookie('year');
             $('#profile_description_registered')[0].innerHTML=getCookie('totalregistered')+" registered events.";
             $('#user_image')[0].src=getCookie('picture');
+            $.getJSON('dataset/notification.json', function (data) {
+                var items=[];
+                $.each(data.notification, function(key, val) {
+                    items.push("<div><h3>"+val.headline+" | <sub>"+val.date+" - "+val.time+"</sub></h3><p>"+val.details+"</p><hr></div>");
+                });
+                items.reverse();
+                $("#dashboard_notification").append(items.join(""));
+            });
             setTimeout(load_event_page, 1000);
             function load_event_page(){
                 $('#user_image').fadeIn('slow', function(){
@@ -260,6 +268,7 @@ $(document).ready(function(){
             }
         }
     }
+
     else{
         alert("Please Login First!");
         window.location="/ebullience/";
