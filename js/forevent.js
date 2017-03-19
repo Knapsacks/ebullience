@@ -139,6 +139,8 @@ $(document).ready(function(){
                             $('#dashboard').css('width','650px');
                             $('#dashboard').css('opacity','1');
                             $('#dashboard').css('transform','translate(+15%,-0.5%)');
+                            $('#logout_button').css('opacity','1');
+                            $('#logout_button').css('transform','translate(-180%,+350%)');
                     }
                     else if($(window).width()>=700){
                         $('#Profile').css('transform','translate(-200%,-150%)');
@@ -147,6 +149,8 @@ $(document).ready(function(){
                         $('#dashboard').css('width','450px');
                         $('#dashboard').css('opacity','1');
                         $('#dashboard').css('transform','translate(+20%,-0.5%)');
+                        $('#logout_button').css('opacity','1');
+                        $('#logout_button').css('transform','translate(-125%,+350%)');
                     }
                     else{
                         $('#Profile').css('transform','translate(0px,-150%)');
@@ -154,7 +158,9 @@ $(document).ready(function(){
                         $('#profile_description').css('transform','translate(0px,-20%)');
                         $('#dashboard').css('width','90%');
                         $('#dashboard').css('opacity','1');
-                        $('#dashboard').css('transform','translate(0px,+80%)');
+                        $('#dashboard').css('transform','translate(0px,+90%)');
+                        $('#logout_button').css('opacity','1');
+                        $('#logout_button').css('transform','translate(0,+350%)');
                     }
                 });
             }
@@ -206,7 +212,6 @@ $(document).ready(function(){
                         $(nav).css('color','rgb(57,123,249)');
                     }
                 }
-
             }
 
             $('#dashboard_nav_mobile_selected').click(function(){
@@ -249,12 +254,117 @@ $(document).ready(function(){
                     $('#dashboard_nav_mobile ul').css('background-color', color);
                 }
             }
+            //code for event block
+            var type;
+            $('#branch').hide();
+            $('#ename').hide();
+            $('#eventd').hide();
+           $('#technical').click(function(){
+                type=$('#technical').text();
+                //  alert(type);
+                $('#first').hide(1,function(){
+                    $('#branch').fadeIn();
+                });
+            });
+            function branch_click(branch){
+                $('#branch').fadeOut(1,function(){
+                    $('#ename').fadeIn();
+                });
+                //alert();
+            }
+            $('#back_branch').click(function(){
+                $('#branch').fadeOut(1,function(){
+                    $('#first').fadeIn();
+                });
+            });
+            function back_ename(type){
+                if(type=="TECHNICAL"){
+                        $('#ename').fadeOut(1,function(){
+                            $('#branch').fadeIn();
+                        
+                    });
+                }
+                else
+                {
+                    $('#ename').fadeOut(1,function(){
+                            $('#first').fadeIn();
+                        });
+                    
+                }
+            }
+            $('#back_ename').click(function(){
+                back_ename(type);
+            });
+            $('#eve_name').click(function(){
+                $('#ename').fadeOut(1,function(){
+                    $('#eventd').fadeIn();
+                });
+            });
+            $('#CSE').click(function(){
+                    branch_click('#CSE');
+            });
+            $('#IT').click(function(){
+                    branch_click('#IT');
+            });
+            $('#ME').click(function(){
+                    branch_click('#ME');
+            });
+            $('#EC').click(function(){
+                    branch_click('#EC');
+            });
+            $('#CHEM').click(function(){
+                    branch_click('#CHEM');
+            });
+            $('#CIVIL').click(function(){
+                    branch_click('#CIVIL');
+            });
+            $('#MCA').click(function(){
+                    branch_click('#MCA');
+            });
+            $('#EN').click(function(){
+                    branch_click('#EN');
+            });
+            $('#BIO').click(function(){
+                    branch_click('#BIO');
+            });
+            $('#MBA').click(function(){
+                    branch_click('#MBA');
+            });
+            $('#PHARMACY').click(function(){
+                    branch_click('#PHARMACY');
+            });    
+            $('#back_eventd').click(function(){
+                $('#eventd').fadeOut(1,function(){
+                    $('#ename').fadeIn();
+                });
+            });
+            $('#common').click(function(){
+                $('#first').fadeOut(1,function(){
+                    $('#ename').fadeIn();
+                    type=null;
+                });
+            });
+            $('#sports').click(function(){
+                $('#first').fadeOut(1,function(){
+                    $('#ename').fadeIn();
+                    type=null;
+                });
+            });
         }
     }
     else{
         alert("Please Login First!");
         window.location="/ebullience/";
     }
+
+    $("#logout_button").click(function(){
+        setCookie('name','',1);
+        setCookie('email','',1);
+        setCookie('phone','',1);
+        setCookie('branch','',1);
+        setCookie('section','',1);
+        window.location="/ebullience/";
+    });
 
     // Generic Cookie Handling Functions
 
