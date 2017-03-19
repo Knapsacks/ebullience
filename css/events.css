@@ -360,6 +360,7 @@ canvas {
     padding: 0px;
     margin: 0px;
     text-align: center;
+    padding-bottom: 10px;
     border-bottom: 3px solid rgb(244,180,0);
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -541,6 +542,25 @@ canvas {
 
 #basic_details #submit{
     margin-top: 10px;
+}
+
+#logout_button{
+    position: absolute;
+    margin: auto;
+    top: 0; right: 0; left: 0; bottom: 0;
+    height: 25px;
+    border: 3px solid black;
+    padding: 5px;
+    width: 180px;
+    background-color: white;
+    z-index: 101;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
 }
 
 @media (min-width:700px){
@@ -759,4 +779,21 @@ canvas {
     h3 {
         page-break-after: avoid;
     }
+}
+.btn{
+  margin-left:45px;
+  float:left;
+  width:150px;
+  cursor: pointer;
+  text-align: center;
+}
+#first{
+  margin-top: 185px;  
+}
+.first{
+  margin-top: 120px;
+}
+.b-btn{
+  cursor: pointer;
+  width: 100px;
 }
