@@ -11,7 +11,7 @@ $(document).ready(function(){
                     items.push("<option value='"+ val +"'>"+ val +"</option>");
                 });
 
-                $("#basic_details_form #branch").append(items.join(""));
+                $("#basic_details_form #branch2").append(items.join(""));
                 $.each(data.year, function(key, val) {
                     items.push("<option value='"+ val +"'>"+ val +"</option>");
                 });
@@ -545,7 +545,7 @@ $(document).ready(function(){
                                 alert('Please Try Again Later!');
                             }
                             else{
-                                alert("Form Submitted");
+                                alert("Registration Successful");
                                 $('#eventregistration').fadeOut(1,function(){
                                         $("#eventregistration")[0].innerHTML='';
                                         $('#eventd').fadeIn();
@@ -575,7 +575,7 @@ $(document).ready(function(){
                                 alert('Please Try Again Later!');
                             }
                             else{
-                                alert("Form Submitted");
+                                alert("Feedback Submitted");
                             }
                         },
                         error:function(){
