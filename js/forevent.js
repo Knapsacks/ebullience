@@ -12,11 +12,13 @@ $(document).ready(function(){
                 });
 
                 $("#basic_details_form #branch2").append(items.join(""));
+		    items=[];
                 $.each(data.year, function(key, val) {
                     items.push("<option value='"+ val +"'>"+ val +"</option>");
                 });
 
                 $("#basic_details_form #year").append(items.join(""));
+		    items=[];
                 $.each(data.section, function(key, val) {
                     items.push("<option value='"+ val +"'>"+ val +"</option>");
                 });
