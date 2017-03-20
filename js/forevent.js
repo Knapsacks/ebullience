@@ -266,7 +266,15 @@ $(document).ready(function(){
                     $('#dashboard_nav_mobile ul').css('background-color', color);
                 }
             }
+
             //code for event block
+            var uniqueevents,events;
+            $.getJSON('dataset/uniqueevents.json', function (data) {
+                uniqueevents=data;
+            });
+            $.getJSON('dataset/events.json', function (data) {
+                events=data;
+            });
             var type;
             $('#branch').hide();
             $('#ename').hide();
@@ -277,9 +285,25 @@ $(document).ready(function(){
                 $('#first').hide(1,function(){
                     $('#branch').fadeIn();
                 });
+                console.log(events);
+                console.log(uniqueevents);
             });
             function branch_click(branch){
                 $('#branch').fadeOut(1,function(){
+                    var items=[];
+                    var check=0;
+                    items.push("<div class='b-btn' id='back_ename'>BACK</div>");
+                    $.each(uniqueevents, function(key, val) {
+                        if(events.technical.indexOf(val["Unique ID"])>-1 & val["Branch which is conducting this"]==branch)
+                        {
+                            check=1;
+                            items.push("<div id="+ val["Unique ID"] +"><h3>"+ val["Event Name"] +"</h3><hr></div>");
+                        }
+                    });
+                    if(check!=1){
+                            items.push("<div><h3>No Event Registered In This Branch Yet. Check Again Later.</h3></div>");
+                    }
+                    $("#ename").append(items.join(""));
                     $('#ename').fadeIn();
                 });
                 //alert();
@@ -290,10 +314,10 @@ $(document).ready(function(){
                 });
             });
             function back_ename(type){
+                $("#ename")[0].innerHTML='';
                 if(type=="TECHNICAL"){
                         $('#ename').fadeOut(1,function(){
                             $('#branch').fadeIn();
-                        
                     });
                 }
                 else
@@ -301,67 +325,122 @@ $(document).ready(function(){
                     $('#ename').fadeOut(1,function(){
                             $('#first').fadeIn();
                         });
-                    
                 }
             }
-            $('#back_ename').click(function(){
+            $(document).on('click','#back_ename',function(){
                 back_ename(type);
             });
-            $('#eve_name').click(function(){
-                $('#ename').fadeOut(1,function(){
-                    $('#eventd').fadeIn();
-                });
-            });
             $('#CSE').click(function(){
-                    branch_click('#CSE');
+                    branch_click('CSE');
             });
             $('#IT').click(function(){
-                    branch_click('#IT');
+                    branch_click('IT');
             });
             $('#ME').click(function(){
-                    branch_click('#ME');
+                    branch_click('ME');
             });
             $('#EC').click(function(){
-                    branch_click('#EC');
+                    branch_click('EC');
             });
             $('#CHEM').click(function(){
-                    branch_click('#CHEM');
+                    branch_click('CHEM');
             });
             $('#CIVIL').click(function(){
-                    branch_click('#CIVIL');
+                    branch_click('CIVIL');
             });
             $('#MCA').click(function(){
-                    branch_click('#MCA');
+                    branch_click('MCA');
             });
             $('#EN').click(function(){
-                    branch_click('#EN');
+                    branch_click('EN');
             });
             $('#BIO').click(function(){
-                    branch_click('#BIO');
+                    branch_click('BIO');
             });
             $('#MBA').click(function(){
-                    branch_click('#MBA');
+                    branch_click('MBA');
             });
             $('#PHARMACY').click(function(){
-                    branch_click('#PHARMACY');
+                    branch_click('PHARMACY');
             });    
-            $('#back_eventd').click(function(){
+            $(document).on('click','#back_eventd',function(){
+                $('#eventd')[0].innerHTML='';
                 $('#eventd').fadeOut(1,function(){
                     $('#ename').fadeIn();
                 });
             });
             $('#common').click(function(){
                 $('#first').fadeOut(1,function(){
+                    var items=[];
+                    var check=0;
+                    items.push("<div class='b-btn' id='back_ename'>BACK</div>");
+                    $.each(uniqueevents, function(key, val) {
+                        if(events.common.indexOf(val["Unique ID"])>-1)
+                        {
+                            check=1;
+                            items.push("<div id="+ val["Unique ID"] +"><h3>"+ val["Event Name"] +"</h3><hr></div>");
+                        }
+                    });
+                    if(check!=1){
+                            items.push("<div><h3>No Event Registered In This Section Yet. Check Again Later.</h3></div>");
+                    }
+                    $("#ename").append(items.join(""));
                     $('#ename').fadeIn();
-                    type=null;
                 });
             });
             $('#sports').click(function(){
                 $('#first').fadeOut(1,function(){
+                    var items=[];
+                    var check=0;
+                    items.push("<div class='b-btn' id='back_ename'>BACK</div>");
+                    $.each(uniqueevents, function(key, val) {
+                        if(events.sports.indexOf(val["Unique ID"])>-1)
+                        {
+                            check=1;
+                            items.push("<div id="+ val["Unique ID"] +"><h3>"+ val["Event Name"] +"</h3><hr></div>");
+                        }
+                    });
+                    if(check!=1){
+                            items.push("<div><h3>No Event Registered In This Branch Yet. Check Again Later.</h3></div>");
+                    }
+                    $("#ename").append(items.join(""));
                     $('#ename').fadeIn();
-                    type=null;
                 });
             });
+            for(var i=0;i<34;i++){
+                $(document).on('click','#'+i,function(){
+                    var id=this.id;
+                    $('#ename').fadeOut(1,function(){
+                        var items=[];
+                        var check=0;
+                        items.push("<div class='b-btn' id='back_eventd'>BACK</div>");
+                        $.each(uniqueevents, function(key, val) {
+                            if(val["Unique ID"]==id)
+                            {
+                                check=1;
+                                items.push(`<div>
+                                <hr>
+                                <h3><b>`+ val["Event Name"] +`</b></h3>
+                                <h4><b>Team Event</b> - `+ val["Team Event ?"] +`</h4>
+                                <h4><b>No Of Maximum Members</b> - `+ val["No Of Team Members (just enter no)"] +`</h4>
+                                <h4><b>Event Day</b> - `+ val["Event Day"] +`</h4>
+                                <h4><b>Event Begins At</b> - `+ val["Event Time Hour (24 Hrs)"] +` `+ val["Event Time Minutes"] +`</h4>
+                                <h4><b>Event Location</b> - `+ val["Event Room (just enter no)"] +` `+ val["Event Block (Building)"] +`</h4>
+                                <h4><b>Student Coordinator</b> : `+ val["Student Coordinator 1 (Name - Number)"] +` `+ val["Student Coordinator 2 (Name - Number)"] +`</h4>
+                                <h4><b>Faculty Coordinator</b> : `+ val["Faculty Coordinator 1 (Name - Number)"] +` `+ val["Faculty Coordinator 2 (Name - Number)"] +`</h4>
+                                <h4><b>Description</b> -</h4>
+                                <p>`+ val["Event Description"] +`</p>
+                                <hr></div>`);
+                            }
+                        });
+                        if(check!=1){
+                                items.push("<div><h3>No Description Added In This Event Yet. Check Again Later.</h3></div>");
+                        }
+                        $("#eventd").append(items.join(""));
+                        $('#eventd').fadeIn();
+                    });
+                });
+            }
         }
     }
 
