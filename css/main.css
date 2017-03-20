@@ -519,11 +519,24 @@ body,
     vertical-align: bottom;
     margin-left: -140px;
     margin-bottom: 50%;
+    opacity: 0;
 }
 
 #login_button #fb_login{
     vertical-align: top;
     margin-top: 50%;
+}
+
+#login_button h2{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    left: 0;
+    top: 0;
+    margin: auto;
+    left: -180px;
+    top: 100px;
+    color: white;
 }
 
 
