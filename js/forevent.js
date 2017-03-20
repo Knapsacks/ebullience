@@ -464,10 +464,10 @@ $(document).ready(function(){
                                 <div><label for="name">Enter Full Name</label>
                                 <input id="name`+ x +`" type="text" name="name" required></div>
 
-                                <div><label for="phone">Enter Phone Number</label>
+                                <div><label for="phone">PhoneNumber</label>
                                 <input id="phone`+ x +`" type="text" name="phone" required></div>
 
-                                <div><label for="rollno">Enter Roll Number</label>
+                                <div><label for="rollno">RollNumber</label>
                                 <input id="rollno`+ x +`" type="number" name="rollno" required></div>
 
                                 <div><label for="branch">Branch</label>
