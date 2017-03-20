@@ -449,40 +449,45 @@ $(document).ready(function(){
 
                 $(document).on('click','#register'+i,function(){
                     var id=this.id.substr(8);
-                    console.log(id);
+                    //console.log(id);
                     $('#eventd').fadeOut(1,function(){
                         var items=[];
                         items.push("<div class='b-btn' id='back_eventdetail'>BACK</div>");
+                        $("#eventregistration").append(items.join(""));
                         $.each(uniqueevents, function(key, val) {
                             if(val["Unique ID"]==id)
                             {
+                                items=[];
                                 items.push(`
+                                    <div id="unique_event_id">`+ id +`</div>
                                     <h2>Register For `+ val["Event Name"] +`</h2>
                                     <p>This is event require `+ val["No Of Team Members (just enter no)"] +` maximum people. First member is always submitted with your name by default.</p>
                                     <h4><b>Member Number 1</b></h4>
                                     <p>Already Filled For you</p>
                                     <form id="event_registration_form" class="topBefore">`);
-                                for(var x=1;x<=val["No Of Team Members (just enter no)"];x++){
+                               $("#eventregistration").append(items.join(""));
+                               items=[];
+                                for(var x=1;x<val["No Of Team Members (just enter no)"];x++){
                                     items.push(`
                                 <h4><b>Enter Details For Member Number `+ String(Number(x)+1) +`</b></h4>
                                 <div><label for="name">Enter Full Name</label>
-                                <input id="name`+ x +`" type="text" name="name" required></div>
+                                <input id="name`+ x +`" type="text" name="name"></div>
 
                                 <div><label for="phone">PhoneNumber</label>
-                                <input id="phone`+ x +`" type="number" name="phone" required></div>
+                                <input id="phone`+ x +`" type="number" name="phone"></div>
 
                                 <div><label for="rollno">RollNumber</label>
-                                <input id="rollno`+ x +`" type="number" name="rollno" required></div>
+                                <input id="rollno`+ x +`" type="number" name="rollno"></div>
 
                                 <div><label for="branch">Branch</label>
-                                <select id="branch`+ x +`" name="branch" required></select></div>
+                                <select id="branch`+ x +`" name="branch"></select></div>
 
                                 <div><label for="section">Section</label>
-                                <select id="section`+ x +`" name="section" required></select></div>
+                                <select id="section`+ x +`" name="section"></select></div>
 
                                 <div><label for="year">Year</label>
-                                <select id="year`+ x +`" name="year" required></select></div>`);
-                               $("#eventregistration").append(items.join(""));
+                                <select id="year`+ x +`" name="year"></select></div>`);
+                               $("#event_registration_form").append(items.join(""));
                                items=[];
                                 var options=[];
                                 $.each(academics.branch, function(key, val) {
@@ -501,14 +506,12 @@ $(document).ready(function(){
                                     options.push("<option value='"+ val +"'>"+ val +"</option>");
                                 });
                                 $("#year"+ x).append(options.join(""));
-                                break;
                             }
-                            }
+                            $("#event_registration_form").append(`
+                                    <input id="eventsubmit" type="submit" value="SUBMIT" class="registersubmit">
+                                    </form>`);
+                        }
                         });
-                        $("#event_registration_form").append(`
-                            <input id="eventsubmit" type="submit" value="SUBMIT" class="registersubmit">
-                            </form>`);
-                        $("#eventregistration").append(items.join(""));
                         $('#eventregistration').fadeIn();
                     });
                 });
@@ -522,12 +525,42 @@ $(document).ready(function(){
             });
 
             $(document).on('submit','#event_registration_form',function(){
-                alert("Form Submitted");
-                $('#eventregistration').fadeOut(1,function(){
-                        $("#eventregistration")[0].innerHTML='';
-                        $('#eventd').fadeIn();
-                        event.preventDefault();
-                });
+                team=$('#event_registration_form').serialize();
+                console.log($('#unique_event_id')[0].innerHTML);
+                console.log(team);
+                $.ajax({
+                        url:"https://ebullience.herokuapp.com/registerevent.php",
+                        data:{
+                            "name": getCookie("name"),
+                            "email": getCookie("email"),
+                            "phone": getCookie("phone"),
+                            "rollno": getCookie("rollno"),
+                            "branch": getCookie("branch"),
+                            "section": getCookie("section"),
+                            "year": getCookie("year"),
+                            "team": team,
+                            "event": Number($('#unique_event_id').innerHTML),
+                        },
+                        cache: false,
+                        dataType: 'jsonp',
+                        success:function(json){
+                            console.log(json);
+                            if(json['error']!=0){
+                                alert('Please Try Again Later!');
+                            }
+                            else{
+                                alert("Form Submitted");
+                                $('#eventregistration').fadeOut(1,function(){
+                                        $("#eventregistration")[0].innerHTML='';
+                                        $('#eventd').fadeIn();
+                                });
+                            }
+                        },
+                        error:function(){
+                            alert("Please Try Again Later!");
+                        }
+                    });
+                event.preventDefault();
             });
 
             $(document).on('submit','#feedback_form',function(){
