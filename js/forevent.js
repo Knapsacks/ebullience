@@ -413,7 +413,7 @@ $(document).ready(function(){
                     $('#ename').fadeIn();
                 });
             });
-            for(var i=0;i<32;i++){
+            for(var i=0;i<34;i++){
                 $(document).on('click','#'+i,function(){
                     var id=this.id;
                     $('#ename').fadeOut(1,function(){
