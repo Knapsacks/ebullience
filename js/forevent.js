@@ -299,7 +299,7 @@ $(document).ready(function(){
                         if(events.technical.indexOf(val["Unique ID"])>-1 & val["Branch which is conducting this"]==branch)
                         {
                             check=1;
-                            items.push("<div id="+ val["Unique ID"] +"><h3>"+ val["Event Name"] +"</h3><hr></div>");
+                            items.push("<div id="+ val["Unique ID"] +" class='event-block'><h3><b>"+ val["Event Name"] +"</b> ></h3><hr></div>");
                         }
                     });
                     if(check!=1){
@@ -380,7 +380,7 @@ $(document).ready(function(){
                         if(events.common.indexOf(val["Unique ID"])>-1)
                         {
                             check=1;
-                            items.push("<div id="+ val["Unique ID"] +"><h3>"+ val["Event Name"] +"</h3><hr></div>");
+                            items.push("<div id="+ val["Unique ID"] +" class='event-block'><h3>"+ val["Event Name"] +"</h3><hr></div>");
                         }
                     });
                     if(check!=1){
@@ -399,7 +399,7 @@ $(document).ready(function(){
                         if(events.sports.indexOf(val["Unique ID"])>-1)
                         {
                             check=1;
-                            items.push("<div id="+ val["Unique ID"] +"><h3>"+ val["Event Name"] +"</h3><hr></div>");
+                            items.push("<div id="+ val["Unique ID"] +" class='event-block'><h3>"+ val["Event Name"] +"</h3><hr></div>");
                         }
                     });
                     if(check!=1){
@@ -422,7 +422,7 @@ $(document).ready(function(){
                                 check=1;
                                 items.push(`<div>
                                 <hr>
-                                <h3><b>`+ val["Event Name"] +` - <span id=register`+ id +`>REGISTER</span></b></h3>
+                                <h3><b>`+ val["Event Name"] +` - <span id=register`+ id +` class='event_register_button'>REGISTER</span></b></h3>
                                 <h4><b>Team Event</b> - `+ val["Team Event ?"] +`</h4>
                                 <h4><b>No Of Maximum Members</b> - `+ val["No Of Team Members (just enter no)"] +`</h4>
                                 <h4><b>Event Day</b> - `+ val["Event Day"] +`</h4>
@@ -502,7 +502,7 @@ $(document).ready(function(){
                             }
                         });
                         $("#eventregistration").append(`
-                            <input id="eventsubmit" type="submit" value="SUBMIT">
+                            <input id="eventsubmit" type="submit" value="SUBMIT" class="registersubmit">
                             </form>`);
                         $("#eventregistration").append(items.join(""));
                         $('#eventregistration').fadeIn();

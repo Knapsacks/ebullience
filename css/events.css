@@ -822,14 +822,65 @@ canvas {
   width:150px;
   cursor: pointer;
   text-align: center;
+  border: 1px dashed black;
+  margin-bottom: 10px;
 }
+
 #first{
   margin-top: 185px;  
 }
 .first{
   margin-top: 120px;
 }
+
+@media (max-width:700px){
+   .first{
+  margin-top: 20px;
+} 
+#first{
+  margin-top: 150px;  
+}
+}
 .b-btn{
   cursor: pointer;
   width: 100px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.event-block:first{
+}
+
+.event-block{
+    margin-top:20px;
+    cursor: pointer;
+}
+
+.event_register_button{
+    border: 2px solid black;
+    padding:3px;
+    cursor: pointer;
+}
+
+#eventregistration{
+    text-align: center;
+}
+
+#eventregistration input{
+    width: 90%;
+}
+label{
+    display: block;
+    width: 100%;
+}
+
+#eventregistration select{
+    width: 90%;
+
+}
+
+#eventregistration input.registersubmit{
+    margin-top: 20px;
+    width: 50%;
+
 }
