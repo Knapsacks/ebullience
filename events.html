@@ -13,23 +13,6 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/events.css">
-        <style type="text/css">
-            #techfooter{
-              position: fixed;
-              margin: auto;
-              right: 0; left: 0; bottom: 3px;
-              width: 100%; height: 9%;
-              padding: 3px;
-              color:white;
-              opacity: 0.8;
-              background-color: #454545;
-              word-wrap: break-word;
-              -webkit-transition: all 1s ease-in-out;
-              -moz-transition: all 1s ease-in-out;
-              -o-transition: all 1s ease-in-out;
-              transition: all 1s ease-in-out;
-            }
-        </style>
     </head>
 <body>
 	<!--[if lt IE 8]>
@@ -143,24 +126,24 @@
         <form id="feedback_form" class="topBefore">
 
           <label for="rating"><h3>Overall Rating: </h3></label>
-          <select id="rating_score" required>
+          <select id="rating_score" name='rating' required>
               <option value="5">5</option><option value="4">4</option>
               <option value="3">3</option><option value="2">2</option>
               <option value="1">1</option>
           </select>
 
           <label for="opinion"><h3>Complaints and Suggestions:</h3></label>
-          <textarea id="comment" rows="4" cols="50" placeholder="briefly describe your opinion or Suggestions, if any."></textarea>
+          <textarea name='comment' id="comment" rows="4" cols="50" placeholder="briefly describe your opinion or Suggestions, if any."></textarea>
 
-          <input id="submit2" type="submit" value="SUBMIT">
+          <input id="feedbacksubmit" type="submit" value="SUBMIT">
         </form>
     </div></div>
 
-    <a href="team.html">
-    <div id="techfooter">
-    <center>Powered By <strong>Knapsacks</strong><br><img src="img/1.png" height="35" width="145">&nbsp<img src="img/aws.png" height="35" width="55">&nbsp<img src="img/php.png" height="35" width="55">&nbsp<img src="img/heroku.png" height="39" width="63"></center>
+    <a href="/ebullienece/team/">
+    <div id="#techfooter">
+    <center>Crafted By <strong>Knapsacks</strong><br>
     </div></a>
-    <!-- Ankit: FeedBack button -->
+
     <div id="feedback_button">
         FeedBack
     </div>

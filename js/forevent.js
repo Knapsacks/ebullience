@@ -285,10 +285,6 @@ $(document).ready(function(){
                 academics=data;
             });
             var type;
-            $('#branch').hide();
-            $('#ename').hide();
-            $('#eventd').hide();
-            $('#eventregistration').hide();
            $('#technical').click(function(){
                 type=$('#technical').text();
                 //  alert(type);
@@ -509,7 +505,7 @@ $(document).ready(function(){
                             }
                             }
                         });
-                        $("#eventregistration").append(`
+                        $("#event_registration_form").append(`
                             <input id="eventsubmit" type="submit" value="SUBMIT" class="registersubmit">
                             </form>`);
                         $("#eventregistration").append(items.join(""));
@@ -525,12 +521,17 @@ $(document).ready(function(){
                 });
             });
 
-            $(document).on('click','#eventsubmit',function(){
+            $(document).on('submit','#event_registration_form',function(){
                 alert("Form Submitted");
                 $('#eventregistration').fadeOut(1,function(){
                         $("#eventregistration")[0].innerHTML='';
                         $('#eventd').fadeIn();
                 });
+            });
+
+            $(document).on('submit','#feedback_form',function(){
+                alert("Form Submitted");
+                $('#feedback').fadeOut();
             });
         }
     }
