@@ -10,23 +10,19 @@ $(document).ready(function(){
                 $.each(data.branch, function(key, val) {
                     items.push("<option value='"+ val +"'>"+ val +"</option>");
                 });
-                $("#basic_details_form #branch").append(items.join(""));
-                items=[];
 
+                $("#basic_details_form #branch").append(items.join(""));
                 $.each(data.year, function(key, val) {
                     items.push("<option value='"+ val +"'>"+ val +"</option>");
                 });
-                $("#basic_details_form #year").append(items.join(""));
-                items=[];
 
+                $("#basic_details_form #year").append(items.join(""));
                 $.each(data.section, function(key, val) {
                     items.push("<option value='"+ val +"'>"+ val +"</option>");
                 });
+
                 $("#basic_details_form #section").append(items.join(""));
-
             });
-
-            $('#basic_details h2')[0].innerHTML="Welcome, "+getCookie("name");
 
             $('#basic_details').fadeIn('slow');
 
@@ -413,7 +409,7 @@ $(document).ready(function(){
                     $('#ename').fadeIn();
                 });
             });
-            for(var i=0;i<34;i++){
+            for(var i=0;i<63;i++){
                 $(document).on('click','#'+i,function(){
                     var id=this.id;
                     $('#ename').fadeOut(1,function(){
