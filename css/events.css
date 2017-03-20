@@ -864,7 +864,12 @@ canvas {
 @media (max-width:700px){
    .first{
   margin-top: 20px;
-} 
+   }
+
+textarea{
+    width: 90%;
+}
+ 
 #first{
   margin-top: 150px;  
 }

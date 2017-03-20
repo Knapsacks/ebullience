@@ -174,7 +174,7 @@ $(document).ready(function(){
                         $('#profile_description').css('transform','translate(0px,-20%)');
                         $('#dashboard').css('width','90%');
                         $('#dashboard').css('opacity','1');
-                        $('#dashboard').css('transform','translate(0px,+90%)');
+                        $('#dashboard').css('transform','translate(0px,+100%)');
                         $('#logout_button').css('opacity','1');
                         $('#logout_button').css('transform','translate(0,+350%)');
                         $('#feedback_button').css('opacity','1');
@@ -383,7 +383,7 @@ $(document).ready(function(){
                         if(events.common.indexOf(val["Unique ID"])>-1)
                         {
                             check=1;
-                            items.push("<div id="+ val["Unique ID"] +" class='event-block'><h3>"+ val["Event Name"] +"</h3><hr></div>");
+                            items.push("<div id="+ val["Unique ID"] +" class='event-block'><h3><b>"+ val["Event Name"] +"</b> ></h3><hr></div>");
                         }
                     });
                     if(check!=1){
@@ -403,7 +403,7 @@ $(document).ready(function(){
                         if(events.sports.indexOf(val["Unique ID"])>-1)
                         {
                             check=1;
-                            items.push("<div id="+ val["Unique ID"] +" class='event-block'><h3>"+ val["Event Name"] +"</h3><hr></div>");
+                            items.push("<div id="+ val["Unique ID"] +" class='event-block'><h3><b>"+ val["Event Name"] +"</b> ></h3><hr></div>");
                         }
                     });
                     if(check!=1){
@@ -526,12 +526,35 @@ $(document).ready(function(){
                 $('#eventregistration').fadeOut(1,function(){
                         $("#eventregistration")[0].innerHTML='';
                         $('#eventd').fadeIn();
+                        event.preventDefault();
                 });
             });
 
             $(document).on('submit','#feedback_form',function(){
-                alert("Form Submitted");
+                var formdata=$('#feedback_form').serializeArray();
+                $.ajax({
+                        url:"https://ebullience.herokuapp.com/feedback.php",
+                        data:{
+                            "rating":formdata[0].value,
+                            "comment":formdata[1].value
+                        },
+                        cache: false,
+                        dataType: 'jsonp',
+                        success:function(json){
+                            console.log(json);
+                            if(json['error']!=0){
+                                alert('Please Try Again Later!');
+                            }
+                            else{
+                                alert("Form Submitted");
+                            }
+                        },
+                        error:function(){
+                            alert("Please Try Again Later!");
+                        }
+                    });
                 $('#feedback').fadeOut();
+                event.preventDefault();
             });
         }
     }
