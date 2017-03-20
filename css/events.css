@@ -16,6 +16,7 @@ body{
   scrollbar-arrow-color: black;
   scrollbar-shadow-color: #C0C0C0;
   scrollbar-dark-shadow-color: #C0C0C0;
+  overflow-y: hidden;
 }
 /*mozilla scrolbalken*/
 @-moz-document url-prefix(http://),url-prefix(https://) {
@@ -535,6 +536,31 @@ canvas {
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
+/*
+#curtain{
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 975;
+  background-color: #454545;
+}*/
+#feedback{
+  position: absolute;
+  margin: auto;
+  top: 0; right: 0; left: 0; bottom: 0;
+  height: 65%;
+  border: 5px solid rgb(30,35,244);
+  padding: 5px;
+  border-radius: 50px;
+  background-color: white;
+  z-index: 999;
+  display: none;
+  text-align: center;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
 
 #basic_details input, select{
     width: 100%;
@@ -542,6 +568,15 @@ canvas {
 
 #basic_details #submit{
     width: 70%;
+    margin-top: 30px;
+}
+
+#feedback input, select{
+    width: 55%;
+}
+
+#feedback #submit2{
+    width: 55%;
     margin-top: 30px;
 }
 
@@ -564,7 +599,7 @@ canvas {
     cursor: pointer;
 }
 
-#logout_button{
+#feedback_button{
     position: absolute;
     margin: auto;
     top: 0; right: 0; left: 0; bottom: 0;
@@ -594,6 +629,17 @@ canvas {
         width: 90%;
     }
 }
+@media (min-width:700px){
+    #feedback{
+        width: 50%;
+    }
+}
+
+@media (max-width:700px){
+    #feedback{
+        width: 90%;
+    }
+}
 
 
 #techfooter{
@@ -611,7 +657,6 @@ canvas {
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
-
 
 /* ==========================================================================
    Media Queries

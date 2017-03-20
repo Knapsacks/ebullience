@@ -153,6 +153,8 @@ $(document).ready(function(){
                             $('#dashboard').css('transform','translate(+15%,-0.5%)');
                             $('#logout_button').css('opacity','1');
                             $('#logout_button').css('transform','translate(-180%,+350%)');
+                            $('#feedback_button').css('opacity','1');
+                            $('#feedback_button').css('transform','translate(-180%,+455%)');
                     }
                     else if($(window).width()>=700){
                         $('#Profile').css('transform','translate(-200%,-150%)');
@@ -163,6 +165,8 @@ $(document).ready(function(){
                         $('#dashboard').css('transform','translate(+20%,-0.5%)');
                         $('#logout_button').css('opacity','1');
                         $('#logout_button').css('transform','translate(-125%,+350%)');
+                        $('#feedback_button').css('opacity','1');
+                        $('#feedback_button').css('transform','translate(-125%,+455%)');
                     }
                     else{
                         $('#Profile').css('transform','translate(0px,-150%)');
@@ -173,6 +177,8 @@ $(document).ready(function(){
                         $('#dashboard').css('transform','translate(0px,+90%)');
                         $('#logout_button').css('opacity','1');
                         $('#logout_button').css('transform','translate(0,+350%)');
+                        $('#feedback_button').css('opacity','1');
+                        $('#feedback_button').css('transform','translate(0,+455%)');
                     }
                 });
             }
@@ -373,6 +379,7 @@ $(document).ready(function(){
             });
             $('#common').click(function(){
                 $('#first').fadeOut(1,function(){
+                    type=null;
                     var items=[];
                     var check=0;
                     items.push("<div class='b-btn' id='back_ename'>BACK</div>");
@@ -392,6 +399,7 @@ $(document).ready(function(){
             });
             $('#sports').click(function(){
                 $('#first').fadeOut(1,function(){
+                    type=null;
                     var items=[];
                     var check=0;
                     items.push("<div class='b-btn' id='back_ename'>BACK</div>");
@@ -531,6 +539,12 @@ $(document).ready(function(){
         alert("Please Login First!");
         window.location="/ebullience/";
     }
+
+    $("#feedback_button").click(function(){
+        //add code to reduce opacity of background
+        $('#curtain').fadeIn('slow');
+        $('#feedback').fadeIn('slow');
+    });
 
     $("#logout_button").click(function(){
         setCookie('name','',1);
