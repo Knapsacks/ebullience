@@ -469,7 +469,7 @@ $(document).ready(function(){
                                 <input id="name`+ x +`" type="text" name="name" required></div>
 
                                 <div><label for="phone">PhoneNumber</label>
-                                <input id="phone`+ x +`" type="text" name="phone" required></div>
+                                <input id="phone`+ x +`" type="number" name="phone" required></div>
 
                                 <div><label for="rollno">RollNumber</label>
                                 <input id="rollno`+ x +`" type="number" name="rollno" required></div>
