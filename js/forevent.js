@@ -268,25 +268,27 @@ $(document).ready(function(){
             }
 
             //code for event block
-            var uniqueevents,events;
+            var uniqueevents,events,academics;
             $.getJSON('dataset/uniqueevents.json', function (data) {
                 uniqueevents=data;
             });
             $.getJSON('dataset/events.json', function (data) {
                 events=data;
             });
+            $.getJSON('dataset/academics.json', function (data) {
+                academics=data;
+            });
             var type;
             $('#branch').hide();
             $('#ename').hide();
             $('#eventd').hide();
+            $('#eventregistration').hide();
            $('#technical').click(function(){
                 type=$('#technical').text();
                 //  alert(type);
                 $('#first').hide(1,function(){
                     $('#branch').fadeIn();
                 });
-                console.log(events);
-                console.log(uniqueevents);
             });
             function branch_click(branch){
                 $('#branch').fadeOut(1,function(){
@@ -420,7 +422,7 @@ $(document).ready(function(){
                                 check=1;
                                 items.push(`<div>
                                 <hr>
-                                <h3><b>`+ val["Event Name"] +`</b></h3>
+                                <h3><b>`+ val["Event Name"] +` - <span id=register`+ id +`>REGISTER</span></b></h3>
                                 <h4><b>Team Event</b> - `+ val["Team Event ?"] +`</h4>
                                 <h4><b>No Of Maximum Members</b> - `+ val["No Of Team Members (just enter no)"] +`</h4>
                                 <h4><b>Event Day</b> - `+ val["Event Day"] +`</h4>
@@ -440,7 +442,88 @@ $(document).ready(function(){
                         $('#eventd').fadeIn();
                     });
                 });
+
+                $(document).on('click','#register'+i,function(){
+                    var id=this.id.substr(8);
+                    console.log(id);
+                    $('#eventd').fadeOut(1,function(){
+                        var items=[];
+                        items.push("<div class='b-btn' id='back_eventdetail'>BACK</div>");
+                        $.each(uniqueevents, function(key, val) {
+                            if(val["Unique ID"]==id)
+                            {
+                                items.push(`
+                                    <h2>Register For `+ val["Event Name"] +`</h2>
+                                    <p>This is event require `+ val["No Of Team Members (just enter no)"] +` maximum people. First member is always submitted with your name by default.</p>
+                                    <h4><b>Member Number 1</b></h4>
+                                    <p>Already Filled For you</p>
+                                    <form id="event_registration_form" class="topBefore">`);
+                                for(var x=1;x<=val["No Of Team Members (just enter no)"];x++){
+                                    items.push(`
+                                <h4><b>Enter Details For Member Number `+ String(Number(x)+1) +`</b></h4>
+                                <div><label for="name">Enter Full Name</label>
+                                <input id="name`+ x +`" type="text" name="name" required></div>
+
+                                <div><label for="phone">Enter Phone Number</label>
+                                <input id="phone`+ x +`" type="text" name="phone" required></div>
+
+                                <div><label for="rollno">Enter Roll Number</label>
+                                <input id="rollno`+ x +`" type="number" name="rollno" required></div>
+
+                                <div><label for="branch">Branch</label>
+                                <select id="branch`+ x +`" name="branch" required></select></div>
+
+                                <div><label for="section">Section</label>
+                                <select id="section`+ x +`" name="section" required></select></div>
+
+                                <div><label for="year">Year</label>
+                                <select id="year`+ x +`" name="year" required></select></div>`);
+                               $("#eventregistration").append(items.join(""));
+                               items=[];
+                                var options=[];
+                                $.each(academics.branch, function(key, val) {
+                                    options.push("<option value='"+ val +"'>"+ val +"</option>");
+                                });
+                                $("#branch"+ x).append(options.join(""));
+                                options=[];
+
+                                $.each(academics.section, function(key, val) {
+                                    options.push("<option value='"+ val +"'>"+ val +"</option>");
+                                });
+                                $("#section"+ x).append(options.join(""));
+                                options=[];
+
+                                $.each(academics.year, function(key, val) {
+                                    options.push("<option value='"+ val +"'>"+ val +"</option>");
+                                });
+                                $("#year"+ x).append(options.join(""));
+                                break;
+                            }
+                            }
+                        });
+                        $("#eventregistration").append(`
+                            <input id="eventsubmit" type="submit" value="SUBMIT">
+                            </form>`);
+                        $("#eventregistration").append(items.join(""));
+                        $('#eventregistration').fadeIn();
+                    });
+                });
             }
+
+            $(document).on('click','#back_eventdetail',function(){
+                $('#eventregistration').fadeOut(1,function(){
+                        $("#eventregistration")[0].innerHTML='';
+                        $('#eventd').fadeIn();
+                });
+            });
+
+            $(document).on('click','#eventsubmit',function(){
+                alert("Form Submitted");
+                $('#eventregistration').fadeOut(1,function(){
+                        $("#eventregistration")[0].innerHTML='';
+                        $('#eventd').fadeIn();
+                });
+            });
         }
     }
 
