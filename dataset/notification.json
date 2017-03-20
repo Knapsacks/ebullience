@@ -1,0 +1,18 @@
+{
+    "notification": [
+        {"no": 0,
+         "type": "all",
+         "date": "19 March",
+         "time": "9:30 PM",
+         "headline": "Feel Free To Give Feedback",
+         "details": "This website is a collaboration of 4 students of your college by doing what they do best, following their passion of programming. Please provide your feedback by clicking on FEEDBACK to make this platform better. To checkout the team <a href='/ebullience/team.html'>CLICK HERE</a>."
+         },
+         {"no": 1,
+         "type": "all",
+         "date": "19 March",
+         "time": "10:30 PM",
+         "headline": "Report Any Bug",
+         "details": "Please ping (contact) any of the developers of this website to report any bug you find by <a href='/ebullience/team.html'>CLICKING HERE</a>."
+         }
+    ]
+}
