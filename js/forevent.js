@@ -129,6 +129,7 @@ $(document).ready(function(){
             $('#profile_description_branch')[0].innerHTML=getCookie('branch');
             $('#profile_description_section')[0].innerHTML=getCookie('section');
             $('#profile_description_year')[0].innerHTML=getCookie('year');
+            $('#profile_description_rollno')[0].innerHTML=getCookie('rollno');
             $('#user_image')[0].src=getCookie('picture');
             $.getJSON('dataset/notification.json', function (data) {
                 var items=[];
@@ -462,7 +463,13 @@ $(document).ready(function(){
                                     <h2>Register For `+ val["Event Name"] +`</h2>
                                     <p>This is event require `+ val["No Of Team Members (just enter no)"] +` maximum people. First member is always submitted with your name by default.</p>
                                     <h4><b>Member Number 1</b></h4>
-                                    <p>Already Filled For you</p>
+                                    Name - ` + getCookie('name') + `<br>
+                                    Email - ` + getCookie('email') + `<br>
+                                    Phone - ` + getCookie('phone') + `<br>
+                                    Branch - ` + getCookie('branch') + `<br>
+                                    Section - ` + getCookie('section') + `<br>
+                                    Year - ` + getCookie('year') + `<br>
+                                    Roll No - ` + getCookie('rollno') + `<br>
                                     <form id="event_registration_form" class="topBefore">`);
                                $("#eventregistration").append(items.join(""));
                                items=[];
@@ -524,9 +531,10 @@ $(document).ready(function(){
             });
 
             $(document).on('submit','#event_registration_form',function(){
+                $('#eventsubmit').replaceWith('<h4 style="color:red" id="eventsubmitwait"><b>SUBMITTING</b></h4>');
                 team=$('#event_registration_form').serialize();
-                console.log($('#unique_event_id')[0].innerHTML);
-                console.log(team);
+                //console.log($('#unique_event_id')[0].innerHTML);
+                //console.log(team);
                 $.ajax({
                         url:"https://ebullience.herokuapp.com/registerevent.php",
                         data:{
@@ -557,6 +565,7 @@ $(document).ready(function(){
                         },
                         error:function(){
                             alert("Please Try Again Later!");
+                    $('#eventsubmitwait').replaceWith('<input id="eventsubmit" type="submit" value="SUBMIT" class="registersubmit">');
                         }
                     });
                 event.preventDefault();

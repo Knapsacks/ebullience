@@ -668,6 +668,13 @@ canvas {
     opacity: 0;
 }
 
+.adsbygoogle{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 90%;
+}
+
 
 /* ==========================================================================
    Media Queries
