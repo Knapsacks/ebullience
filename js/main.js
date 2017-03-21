@@ -23,7 +23,6 @@ $(document).ready(function(){
 	}
 	function show_login(){
 		$('#login_button').fadeIn('slow');
-		$('#event_date').fadeIn('slow');
 	}
 
 	// Facebook login with JavaScript SDK
