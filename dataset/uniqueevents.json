@@ -25,7 +25,7 @@
     "Event Description": "Stages :<br>1.\tWrite up your plan in a paper<br>Time of submitted on 23/3/2017 at 11 to 12 pm <br>2.\tSelection <br>There is a screening session of  presentation. <br>Time : 1:30 to 2:30<br>Venue : room no 304-e<br> Day :23 /3/2017<br>3.\tFinal presentation <br>Time : 10 am <br>Venue :  room no : 304-e<br>Day:  25/3/2017",
     "Team Event ?": "Yes",
     "No Of Team Members (just enter no)": 4,
-    "Event Time Hour (24 Hrs)": 2,
+    "Event Time Hour (24 Hrs)": 12,
     "Event Time Minutes": 0,
     "Event Block (Building)": "E",
     "Event Room (just enter no)": 304,
@@ -915,17 +915,31 @@
     "Unique ID": 49,
     "Timestamp": "3/20/2017 19:35:13",
     "Event Name": "Fireless Cooking",
-    "Event Description": "It is the event in which you have to cook without using fire.<br>Rules and Regulations- <br>1. The participants should bring their own item to make food.<br>2. The judgement will be on the basis of taste and presentation.<br>3. The event has only two rounds.",
+    "Event Description": "For those master chefs who enjoy being in the kitchen or helping their mommy.<br>
+ • Can participate alone or with a partner. <br>• Event consist of 2 rounds:<br> 
+1) Make some quick and yummy snack without using fire with a compulsory drink and impress judges to qualify for the second round<br>
+Time duration: One hour<br>
+2) Here comes a challenge: You will be given one ingredient that is mandatory to be present in your meal.<br> 
+Time duration: Half hour<br>
+
+ Rules: <br>
+· Participant have to prepare an eatable without using the fire. <br>
+·  The participants should not make use of any appliances. <br>
+· All the required materials will have to be brought by the participants along with the crockery, Cutlery for tasting and serving purposes.<br> 
+· Participants should not bring any pre cooked items and any cut, chopped or grated raw materials. Participants can bring non-electric appliances. <br>
+· All the items required for cooking should be brought by themselves including water. Only working table will be provided.<br>
+ · In this round the teams will have to prepare a dish with in 60 minutes including chopping, grating of raw materials. <br>
+· Results will be based on creativity and presence of mind of the participants. · The evaluation will be based on the taste of the dish, nutritional level. Cleanliness and presentation under the competition of Fireless Cooking",
     "Team Event ?": "Yes",
     "No Of Team Members (just enter no)": 2,
     "Event Time Hour (24 Hrs)": 14,
     "Event Time Minutes": 0,
-    "Event Block (Building)": "E",
-    "Event Room (just enter no)": 403,
-    "Student Coordinator 1 (Name - Number)": "Sushant Kumar",
-    "Student Coordinator 2 (Name - Number)": "Parmeet Singh",
-    "Faculty Coordinator 1 (Name - Number)": "Monika Srivastava",
-    "Faculty Coordinator 2 (Name - Number)": "Priyanka Goel",
+    "Event Block (Building)": "B",
+    "Event Room (just enter no)": 003,
+    "Student Coordinator 1 (Name - Number)": "Sushant singh- 8006690351",
+    "Student Coordinator 2 (Name - Number)": " Himanshu Rajak - 9958267308 ",
+    "Faculty Coordinator 1 (Name - Number)": "Zeeshan Khan",
+    "Faculty Coordinator 2 (Name - Number)": "",
     "Branch which is conducting this": "BIO",
     "Event Day": 24,
     "Event Type": "Technical"
@@ -1020,7 +1034,7 @@
     "Student Coordinator 1 (Name - Number)": "Sushant Kumar",
     "Student Coordinator 2 (Name - Number)": "Parmeet Singh",
     "Faculty Coordinator 1 (Name - Number)": "Monika Srivastava",
-    "Faculty Coordinator 2 (Name - Number)": "Sourabh Yadav",
+    "Faculty Coordinator 2 (Name - Number)": "Niharika Dutt",
     "Branch which is conducting this": "CHEM",
     "Event Day": 24,
     "Event Type": "Technical"
@@ -1076,7 +1090,7 @@
     "Event Room (just enter no)": 3,
     "Student Coordinator 1 (Name - Number)": "Sushant Kumar",
     "Student Coordinator 2 (Name - Number)": "Aman Pandey",
-    "Faculty Coordinator 1 (Name - Number)": "Niharika Dutt",
+    "Faculty Coordinator 1 (Name - Number)": "Sourabh Yadav",
     "Faculty Coordinator 2 (Name - Number)": "Priyanka Goel",
     "Branch which is conducting this": "CHEM",
     "Event Day": 25,
@@ -1128,7 +1142,7 @@
     "Event Description": "RULES & REGULATIONS: ( KARYANEETI)<br>               ELIMINATION GAME (BOUNCING BALL )<br>•\t3-4 MEMBERS IN EACH GROUP<br>•\t1 BALLS PROVIDED TO EACH GROUP<br>•\t YOU HAVE TO CATCH  MAXIMUM BALLS  TO GET SELECTED FOR  NEXT  ROUND<br>•\tTIME LIMIT -5 MIN.<br>1)\tPASS  THE  BALL<br>•\t1 BALL  PROVIDED  TO  EACH  GROUP<br>•\tYOU HAVE TO PASS THE BALL TO THE LAST GLASS OF THE TABLE.<br>•\t YOU CAN’T USE YOUR HANDS YOU HAVE TO BLOW THE BALL FOR  PASSING NEXT GLASS.<br>•\tTIME LIMIT- 5 MIN<br>2)\tBALLOON TRAINING<br>•\tMAXIMUM BALLONS YOU HAVE TO COLLECT<br>•\tYOU HAVE TO GRAB THAT BALLON WITHOUT USING YOUR HANDS<br>•\tTIME LIMIT – 5 MIN<br>3)\tBLIND MANAGER<br>•\t1 MEMBER OF EVERY TEAM BLIND FOLD  ON ITS EYES.<br>•\tOTHER TEAM MEMBERS WILL DIRECT HIM/HER <br>•\tTHERE WILL BE A PATH PROVIDED ALONG WITH HURDELS & OBSTACLES<br>•\tTIME LIMIT- 5 MIN<br>4)\tPAPER TOWER<br>•\tSOME SCRAP PAPERS PROVIDED TO THE TEAM<br>•\tWITH THE HELP OF THOSE SCRAP PAPERS THEY HAVE TO BUILD UP A TOWER<br>•\tTHE TOWER SHOULD BE STAND TILL THE TIME LIMIT HAD PROVIDED.<br>•\tTIME LIMIT – 10 MIN",
     "Team Event ?": "Yes",
     "No Of Team Members (just enter no)": 4,
-    "Event Time Hour (24 Hrs)": 12,
+    "Event Time Hour (24 Hrs)": 14,
     "Event Time Minutes": 0,
     "Event Block (Building)": "Ground",
     "Event Room (just enter no)": 0,
@@ -1147,7 +1161,7 @@
     "Event Description": "(DEPARTMENT OF MBA)<br>A VIDEO OF  SOCIAL MESSAGE<br>(EX-SAVE WATER , CHILD LABOUR, SAVE ANIMALS)<br>RULES & REGULATIONS<br>1. YOUR VIDEO MUST CONTAIN SOME SOCIAL MESSAGE.<br>2. YOU CAN PARTICIPATE AS A SOLO OR AS A TEAM(MAX. 3-4 MEMBERS).<br>3. LENGTH OF VIDEO (3-8 MINUTES).<br>4. COPY PASTE VIDEO IS NOT ALLOWED.<br>5. YOU CAN ALSO INCLUDE SOME PICTURES IN YOUR VIDEO.<br>Day : 24.3.2017<br>TIME : 11:00 A.M. ONWARDS<br>PLACE : E BLOCK 3rd FLOOR",
     "Team Event ?": "Yes",
     "No Of Team Members (just enter no)": 4,
-    "Event Time Hour (24 Hrs)": 3,
+    "Event Time Hour (24 Hrs)": 11,
     "Event Time Minutes": 0,
     "Event Block (Building)": "E",
     "Event Room (just enter no)": 304,
@@ -1166,14 +1180,14 @@
     "Event Description": "<b>Spelling is important because it aids in reading. It helps cement the connection that is shared between sounds and letters.</b><br>This spell bee will have three rounds:<br>1. Chain Spell: Participants have to spell six words correctly within 45 seconds. The lesser you take time, is better. The participants will decide each other's fate by choosing six slips containing words for each other.<br>2. Jumble Bee: This round will comprise of guessing a word on the basis of three hints that'll be provided to you. You'll have to guess one word within 45 seconds. <br>3. Power Spell: No time limit. Take your time, write down the word if you want, and spell it by reading it loud.<br>Bakersbill's Spell: It's a word worth 30 points. It can be tough or easy. You'll be asked to choose one for yourself.<br>Enchantress: The end of the spell bee will leabe some of those who loss the third round or who ended up badly at the second level. But the Enchantress has got something for you. It's a <b>tongue twister</b>. Enchant and recite it correctly five times and you'll win a trophy for the best toungue twister",
     "Team Event ?": "No",
     "No Of Team Members (just enter no)": 1,
-    "Event Time Hour (24 Hrs)": 11,
+    "Event Time Hour (24 Hrs)": 12,
     "Event Time Minutes": 0,
     "Event Block (Building)": "E",
     "Event Room (just enter no)": 406,
-    "Student Coordinator 1 (Name - Number)": "Ved Parkesh Mishra    Mob: 8866402942",
-    "Student Coordinator 2 (Name - Number)": "Kapil Sharma    Mob: 9958657007",
-    "Faculty Coordinator 1 (Name - Number)": "Pooja Tyagi",
-    "Faculty Coordinator 2 (Name - Number)": "Vijit mittal",
+    "Student Coordinator 1 (Name - Number)": "Rohit Satyam 9990414961",
+    "Student Coordinator 2 (Name - Number)": "Rohit Panchal 8010169616",
+    "Faculty Coordinator 1 (Name - Number)": "Vipin Kumar 9891896132",
+    "Faculty Coordinator 2 (Name - Number)": "",
     "Branch which is conducting this": "",
     "Event Day": 25,
     "Event Type": "Common"
