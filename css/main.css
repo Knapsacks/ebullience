@@ -539,6 +539,19 @@ body,
     color: white;
 }
 
+#fb_login{
+    cursor: pointer;
+}
+
+#event_date{
+    position: absolute;
+    z-index: 1001;
+    color: white;
+    top: 230px;
+    display: none;
+    left: 540px;
+}
+
 
 /* ==========================================================================
    Media Queries
