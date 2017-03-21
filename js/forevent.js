@@ -430,7 +430,7 @@ $(document).ready(function(){
                                 <h4><b>Team Event</b> - `+ val["Team Event ?"] +`</h4>
                                 <h4><b>No Of Maximum Members</b> - `+ val["No Of Team Members (just enter no)"] +`</h4>
                                 <h4><b>Event Day</b> - `+ val["Event Day"] +`</h4>
-                                <h4><b>Event Begins At</b> - `+ val["Event Time Hour (24 Hrs)"] +` `+ val["Event Time Minutes"] +`</h4>
+                                <h4><b>Event Begins At</b> - `+ val["Event Time Hour (24 Hrs)"] +` : `+ val["Event Time Minutes"] +`(24 Hours Format)</h4>
                                 <h4><b>Event Location</b> - `+ val["Event Room (just enter no)"] +` `+ val["Event Block (Building)"] +`</h4>
                                 <h4><b>Student Coordinator</b> : `+ val["Student Coordinator 1 (Name - Number)"] +` `+ val["Student Coordinator 2 (Name - Number)"] +`</h4>
                                 <h4><b>Faculty Coordinator</b> : `+ val["Faculty Coordinator 1 (Name - Number)"] +` `+ val["Faculty Coordinator 2 (Name - Number)"] +`</h4>
