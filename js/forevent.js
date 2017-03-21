@@ -180,6 +180,7 @@ $(document).ready(function(){
                         $('#feedback_button').css('transform','translate(0,+455%)');
                     }
                 });
+            alert("you can click at the bottom on 'Team Knapsacks' to check out who made the website and also to query for any complain");
             }
 
             $('#dashboard_nav_events').click(function(){
