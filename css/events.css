@@ -872,16 +872,28 @@ canvas {
         page-break-after: avoid;
     }
 }
-.btn{
-  margin-left:45px;
-  float:left;
-  width:150px;
-  cursor: pointer;
-  text-align: center;
-  border: 1px dashed black;
-  margin-bottom: 10px;
+@media (min-width:700px){
+    .btn{
+    margin-left:45px;
+    float:left;
+    width:150px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px dashed black;
+    margin-bottom: 10px;
+    }
 }
 
+@media (max-width:700px){
+    .btn{
+    margin:auto;
+    width:150px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px dashed black;
+    margin-bottom: 10px;
+    }
+}
 #first{
   margin-top: 185px;  
 }
