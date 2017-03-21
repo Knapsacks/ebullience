@@ -598,9 +598,13 @@ $(document).ready(function(){
     }
 
     $("#feedback_button").click(function(){
-        //add code to reduce opacity of background
-        $('#curtain').fadeIn('slow');
+        $('.curtain').fadeIn('slow');
         $('#feedback').fadeIn('slow');
+    });
+
+    $(".close").click(function(){
+        $('.curtain').fadeOut('slow');
+        $('#feedback').fadeOut('slow');
     });
 
     $("#logout_button").click(function(){
