@@ -129,7 +129,6 @@ $(document).ready(function(){
             $('#profile_description_branch')[0].innerHTML=getCookie('branch');
             $('#profile_description_section')[0].innerHTML=getCookie('section');
             $('#profile_description_year')[0].innerHTML=getCookie('year');
-            $('#profile_description_registered')[0].innerHTML=getCookie('totalregistered')+" registered events.";
             $('#user_image')[0].src=getCookie('picture');
             $.getJSON('dataset/notification.json', function (data) {
                 var items=[];
