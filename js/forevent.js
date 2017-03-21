@@ -539,7 +539,7 @@ $(document).ready(function(){
                             "section": getCookie("section"),
                             "year": getCookie("year"),
                             "team": team,
-                            "event": Number($('#unique_event_id').innerHTML),
+                            "event": Number($('#unique_event_id')[0].innerHTML),
                         },
                         cache: false,
                         dataType: 'jsonp',
