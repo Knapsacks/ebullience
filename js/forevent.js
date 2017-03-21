@@ -142,6 +142,8 @@ $(document).ready(function(){
             setTimeout(load_event_page, 1000);
             function load_event_page(){
                 $('#user_image').fadeIn('slow', function(){
+			$('feedback_button').show()
+			$('logout_button').show()
                     if($(window).width()>=900){
                             $('#Profile').css('transform','translate(-290%,-150%)');
                             $('#profile_description').css('opacity','1');
