@@ -92,7 +92,7 @@
     "Faculty Coordinator 2 (Name - Number)": "",
     "Branch which is conducting this": "Common",
     "Event Day": "Both days",
-    "Event Type": "Technical"
+    "Event Type": "Common"
   },
   {
     "Unique ID": 6,
@@ -935,7 +935,7 @@ Time duration: Half hour<br>
     "Event Time Hour (24 Hrs)": 14,
     "Event Time Minutes": 0,
     "Event Block (Building)": "B",
-    "Event Room (just enter no)": 003,
+    "Event Room (just enter no)": 3,
     "Student Coordinator 1 (Name - Number)": "Sushant singh- 8006690351",
     "Student Coordinator 2 (Name - Number)": " Himanshu Rajak - 9958267308 ",
     "Faculty Coordinator 1 (Name - Number)": "Zeeshan Khan",
@@ -991,25 +991,6 @@ Time duration: Half hour<br>
     "No Of Team Members (just enter no)": 4,
     "Event Time Hour (24 Hrs)": 11,
     "Event Time Minutes": 0,
-    "Event Block (Building)": "B",
-    "Event Room (just enter no)": 411,
-    "Student Coordinator 1 (Name - Number)": "Adesh srivastav (ME 4th Yr.)  Mob:- +917503210492",
-    "Student Coordinator 2 (Name - Number)": "Gaus’e Alam (ME 4th Yr.)  Mob:- +918800908545",
-    "Faculty Coordinator 1 (Name - Number)": "Mr. Atul Kumar",
-    "Faculty Coordinator 2 (Name - Number)": "",
-    "Branch which is conducting this": "ME",
-    "Event Day": "Both days",
-    "Event Type": "Technical"
-  },
-  {
-    "Unique ID": 53,
-    "Timestamp": "3/20/2017 19:45:42",
-    "Event Name": "Hydraulic Lift",
-    "Event Description": "Hydraulics is used in many applications we see or use every day. The brakes in an automobile or the lift on the bucket of a tractor are two very common applications. We can experiment with simple hydraulics using plastic syringes for cylinders and small plastic tubing for the hydraulic hose. One definition I read for hydraulics was, “the movement of pressurized liquids through confined spaces.”<br>Team members: Each team should have maximum of 4 members<br>Time allotted: 2 ½ hours to each teams (for fabrication of Hydraulics Lift)<br>Steps to Podium Finish:<br>1.\tFirst round is quiz round (based on basic fluid mechanics and hydraulics) which will be a qualified round.<br>2.\tThere will be 20 objective questions and time provided will be 15 min.<br>3.\tThen the final round i.e., fabrication of Hydraulic lift.<br>4.\tWinner will be decided on the basis of Design (5 marks) and Weight lifted by the Arm (20 marks) obtained by respective teams which is decided by our Faculty Advisor.<br>Materials:<br>1.\tWooden piECs of required length.<br>2.\tPlywood.<br>3.\t4 syringes (two of 5 mm & two of 10 mm).<br>4.\tOD tubes (24-30 inch long).<br>5.\tCello Tape.<br>6.\tWashers, Nails and Screw (as per requirement).<br>Rules:<br>1.\tEach teams must have 3-4 members only.<br>2.\tNo extra material will be allowed for making arm, if done so will lead to disqualification of the team. Only materials provided during final round should be used.<br>3.\tThe materials are provided to each team at final round by our coordinators.<br>4.\tAny type of argument with coordinators or other teams will result to disqualification of that team.<br>5.\tAny type of indiscipline nuisance created shall lead to disqualification.<br>6.\tHydraulic RAM is not allowed.<br>7.\tDuring testing, no deflection of arm or leakage of syringe will entertained. The testing will stop at that moment.",
-    "Team Event ?": "Yes",
-    "No Of Team Members (just enter no)": 4,
-    "Event Time Hour (24 Hrs)": 3,
-    "Event Time Minutes": 30,
     "Event Block (Building)": "B",
     "Event Room (just enter no)": 411,
     "Student Coordinator 1 (Name - Number)": "Adesh srivastav (ME 4th Yr.)  Mob:- +917503210492",
