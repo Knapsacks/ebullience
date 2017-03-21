@@ -13,6 +13,13 @@
          "time": "10:30 PM",
          "headline": "Report Any Bug",
          "details": "Please ping (contact) any of the developers of this website to report any bug you find by <a href='/ebullience/team.html'>CLICKING HERE</a>."
+         },
+         {"no": 2,
+         "type": "all",
+         "date": "21 March",
+         "time": "5:52 PM",
+         "headline": "EVENTS UPDATED",
+         "details": "All Events are updated and visible. And the registrations begin."
          }
     ]
 }

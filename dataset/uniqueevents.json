@@ -1,4 +1,5 @@
-[
+{
+  "all":[
   {
     "Unique ID": 1,
     "Timestamp": "3/20/2017 16:43:48",
@@ -915,21 +916,7 @@
     "Unique ID": 49,
     "Timestamp": "3/20/2017 19:35:13",
     "Event Name": "Fireless Cooking",
-    "Event Description": "For those master chefs who enjoy being in the kitchen or helping their mommy.<br>
- • Can participate alone or with a partner. <br>• Event consist of 2 rounds:<br> 
-1) Make some quick and yummy snack without using fire with a compulsory drink and impress judges to qualify for the second round<br>
-Time duration: One hour<br>
-2) Here comes a challenge: You will be given one ingredient that is mandatory to be present in your meal.<br> 
-Time duration: Half hour<br>
-
- Rules: <br>
-· Participant have to prepare an eatable without using the fire. <br>
-·  The participants should not make use of any appliances. <br>
-· All the required materials will have to be brought by the participants along with the crockery, Cutlery for tasting and serving purposes.<br> 
-· Participants should not bring any pre cooked items and any cut, chopped or grated raw materials. Participants can bring non-electric appliances. <br>
-· All the items required for cooking should be brought by themselves including water. Only working table will be provided.<br>
- · In this round the teams will have to prepare a dish with in 60 minutes including chopping, grating of raw materials. <br>
-· Results will be based on creativity and presence of mind of the participants. · The evaluation will be based on the taste of the dish, nutritional level. Cleanliness and presentation under the competition of Fireless Cooking",
+    "Event Description": "For those master chefs who enjoy being in the kitchen or helping their mommy.<br>• Can participate alone or with a partner. <br>• Event consist of 2 rounds:<br> 1) Make some quick and yummy snack without using fire with a compulsory drink and impress judges to qualify for the second round<br>Time duration: One hour<br>2) Here comes a challenge: You will be given one ingredient that is mandatory to be present in your meal.<br> Time duration: Half hour<br> Rules: <br>· Participant have to prepare an eatable without using the fire. <br>·  The participants should not make use of any appliances. <br>· All the required materials will have to be brought by the participants along with the crockery, Cutlery for tasting and serving purposes.<br> · Participants should not bring any pre cooked items and any cut, chopped or grated raw materials. Participants can bring non-electric appliances. <br>· All the items required for cooking should be brought by themselves including water. Only working table will be provided.<br> · In this round the teams will have to prepare a dish with in 60 minutes including chopping, grating of raw materials. <br>· Results will be based on creativity and presence of mind of the participants. · The evaluation will be based on the taste of the dish, nutritional level. Cleanliness and presentation under the competition of Fireless Cooking",
     "Team Event ?": "Yes",
     "No Of Team Members (just enter no)": 2,
     "Event Time Hour (24 Hrs)": 14,
@@ -1174,3 +1161,4 @@ Time duration: Half hour<br>
     "Event Type": "Common"
   }
 ]
+}

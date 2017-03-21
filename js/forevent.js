@@ -276,7 +276,7 @@ $(document).ready(function(){
             //code for event block
             var uniqueevents,events,academics;
             $.getJSON('dataset/uniqueevents.json', function (data) {
-                uniqueevents=data;
+                uniqueevents=data.all;
             });
             $.getJSON('dataset/events.json', function (data) {
                 events=data;
