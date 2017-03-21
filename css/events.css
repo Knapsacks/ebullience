@@ -673,7 +673,6 @@ canvas {
     left: 34%;
     top: 1%;
     margin: auto;
-    border: 3px solid black;
     width: 600px;
     display: none;
     opacity: 0;

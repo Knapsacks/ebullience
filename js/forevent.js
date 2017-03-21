@@ -152,7 +152,7 @@ $(document).ready(function(){
                             $('#profile_description').css('transform','translate(-180%,-20%)');
                             $('#dashboard').css('width','650px');
                             $('#dashboard').css('opacity','1');
-                            $('#dashboard').css('transform','translate(+15%,0)');
+                            $('#dashboard').css('transform','translate(+15%,.4%)');
                             $('#logout_button').css('opacity','1');
                             $('#logout_button').css('transform','translate(-180%,+350%)');
                             $('#feedback_button').css('opacity','1');
@@ -164,7 +164,7 @@ $(document).ready(function(){
                         $('#profile_description').css('transform','translate(-125%,-20%)');
                         $('#dashboard').css('width','450px');
                         $('#dashboard').css('opacity','1');
-                        $('#dashboard').css('transform','translate(+20%,0)');
+                        $('#dashboard').css('transform','translate(+20%,.4%)');
                         $('#logout_button').css('opacity','1');
                         $('#logout_button').css('transform','translate(-125%,+350%)');
                         $('#feedback_button').css('opacity','1');
@@ -176,7 +176,7 @@ $(document).ready(function(){
                         $('#profile_description').css('transform','translate(0px,-20%)');
                         $('#dashboard').css('width','90%');
                         $('#dashboard').css('opacity','1');
-                        $('#dashboard').css('transform','translate(0px,+120%)');
+                        $('#dashboard').css('transform','translate(0px,+100%)');
                         $('#logout_button').css('opacity','1');
                         $('#logout_button').css('transform','translate(0,+350%)');
                         $('#feedback_button').css('opacity','1');
@@ -580,7 +580,9 @@ $(document).ready(function(){
                         url:"https://ebullience.herokuapp.com/feedback.php",
                         data:{
                             "rating":formdata[0].value,
-                            "comment":formdata[1].value
+                            "comment":formdata[1].value,
+                            "rollno": getCookie("rollno"),
+                            "name": getCookie("name"),
                         },
                         cache: false,
                         dataType: 'jsonp',
