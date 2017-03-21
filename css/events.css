@@ -535,23 +535,46 @@ canvas {
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-/*
-#curtain{
-  display: none;
-  height: 100%;
-  width: 100%;
-  z-index: 975;
-  background-color: #454545;
-}*/
+
+ /*curtain*/
+ .curtain {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    padding-top: auto; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #feedback{
   position: absolute;
   margin: auto;
   top: 0; right: 0; left: 0; bottom: 0;
   height: 65%;
-  border: 5px solid rgb(30,35,244);
-  padding: 5px;
-  border-radius: 50px;
-  background-color: white;
+  border: 3px solid rgb(30,35,244);
+  padding: 8px;
+  /*border-radius: 50px;*/
+  background-color: #f2f2f2;
   z-index: 999;
   display: none;
   text-align: center;
@@ -587,9 +610,10 @@ canvas {
     padding: 5px;
     width: 180px;
     background-color: white;
-    z-index: 101;
+    z-index: 55;
     text-align: center;
     opacity: 0;
+    display: none;
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
@@ -606,9 +630,10 @@ canvas {
     padding: 5px;
     width: 180px;
     background-color: white;
-    z-index: 101;
+    z-index: 55;
     text-align: center;
     opacity: 0;
+    display: none;
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;

@@ -12,11 +12,13 @@ $(document).ready(function(){
                 });
 
                 $("#basic_details_form #branch2").append(items.join(""));
+		    items=[];
                 $.each(data.year, function(key, val) {
                     items.push("<option value='"+ val +"'>"+ val +"</option>");
                 });
 
                 $("#basic_details_form #year").append(items.join(""));
+		    items=[];
                 $.each(data.section, function(key, val) {
                     items.push("<option value='"+ val +"'>"+ val +"</option>");
                 });
@@ -139,7 +141,9 @@ $(document).ready(function(){
             });
             setTimeout(load_event_page, 1000);
             function load_event_page(){
-                $('#user_image').fadeIn('slow', function(){
+		$('#feedback_button').fadeIn('slow');
+		$('#logout_button').fadeIn('slow');
+                $('#user_image').fadeIn('slow', function(){	
                     if($(window).width()>=900){
                             $('#Profile').css('transform','translate(-290%,-150%)');
                             $('#profile_description').css('opacity','1');
@@ -594,9 +598,13 @@ $(document).ready(function(){
     }
 
     $("#feedback_button").click(function(){
-        //add code to reduce opacity of background
-        $('#curtain').fadeIn('slow');
+        $('.curtain').fadeIn('slow');
         $('#feedback').fadeIn('slow');
+    });
+
+    $(".close").click(function(){
+        $('.curtain').fadeOut('slow');
+        $('#feedback').fadeOut('slow');
     });
 
     $("#logout_button").click(function(){
