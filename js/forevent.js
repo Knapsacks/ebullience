@@ -141,8 +141,10 @@ $(document).ready(function(){
             });
             setTimeout(load_event_page, 1000);
             function load_event_page(){
-		$('#feedback_button').fadeIn('slow');
-		$('#logout_button').fadeIn('slow');
+            $('#feedback_button').fadeIn('slow');
+            $('#logout_button').fadeIn('slow');
+            $('.adsbygoogle').fadeIn('slow');
+            $('.adsbygoogle').css('opacity','1');
                 $('#user_image').fadeIn('slow', function(){	
                     if($(window).width()>=900){
                             $('#Profile').css('transform','translate(-290%,-150%)');
@@ -150,7 +152,7 @@ $(document).ready(function(){
                             $('#profile_description').css('transform','translate(-180%,-20%)');
                             $('#dashboard').css('width','650px');
                             $('#dashboard').css('opacity','1');
-                            $('#dashboard').css('transform','translate(+15%,-0.5%)');
+                            $('#dashboard').css('transform','translate(+15%,0)');
                             $('#logout_button').css('opacity','1');
                             $('#logout_button').css('transform','translate(-180%,+350%)');
                             $('#feedback_button').css('opacity','1');
@@ -162,7 +164,7 @@ $(document).ready(function(){
                         $('#profile_description').css('transform','translate(-125%,-20%)');
                         $('#dashboard').css('width','450px');
                         $('#dashboard').css('opacity','1');
-                        $('#dashboard').css('transform','translate(+20%,-0.5%)');
+                        $('#dashboard').css('transform','translate(+20%,0)');
                         $('#logout_button').css('opacity','1');
                         $('#logout_button').css('transform','translate(-125%,+350%)');
                         $('#feedback_button').css('opacity','1');
@@ -174,7 +176,7 @@ $(document).ready(function(){
                         $('#profile_description').css('transform','translate(0px,-20%)');
                         $('#dashboard').css('width','90%');
                         $('#dashboard').css('opacity','1');
-                        $('#dashboard').css('transform','translate(0px,+100%)');
+                        $('#dashboard').css('transform','translate(0px,+120%)');
                         $('#logout_button').css('opacity','1');
                         $('#logout_button').css('transform','translate(0,+350%)');
                         $('#feedback_button').css('opacity','1');
