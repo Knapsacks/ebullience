@@ -181,6 +181,7 @@ $(document).ready(function(){
                         $('#feedback_button').css('transform','translate(0,+455%)');
                     }
                 });
+            alert("Should you need any further information or help, get in touch with us by clicking on Team Knapsacks at the bottom of this page");
             }
 
             $('#dashboard_nav_events').click(function(){
