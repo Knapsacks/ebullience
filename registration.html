@@ -2,22 +2,11 @@
      <html>
      <head>
           <title>Event Registration Details</title>
-          <!-- <script
-            src="https://code.jquery.com/jquery-3.1.1.js"
-            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-            crossorigin="anonymous"></script>
-          <script type="text/javascript">
-                var uniqueevents;
-                 $.getJSON('dataset/uniqueevents.json', function (data) {
-                     uniqueevents=JSON.parse(all);
-                 });
-          </script> -->
-         
      </head>
      <body>
      <form name="event_details" action="https://ebullience.herokuapp.com/downloadcsv.php" method="GET">
           Select Event: 
-          <select name="eventid">
+          <select name="eventid" required>
           <option value="1">So You Think You Can Do It</option>
           <option  value="2">Business option </option >
           <option  value="3">Fastrack</option >
@@ -80,7 +69,7 @@
           <option  value="62">IDEATORS</option >
           <option  value="63">SPELL BEE</a>
           </select><br>
-          Token: <input name="token" placeholder="Enter Coordinator Token">
+          Token: <input name="token" placeholder="Enter Coordinator Token" required>
           <input type="submit" value="Submit" >
      </form>
      <!--  <script type="text/javascript">
