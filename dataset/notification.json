@@ -34,6 +34,20 @@
          "time": "7:20 PM",
          "headline": "EVENT COORDINATORS CAN DOWNLOAD PARTICIPANTS LIST",
          "details": "Event coordinators can download the participant lists from the website itself by <a href='https://knapsacks.github.io/ebullience/registration.html'>CLICKING HERE</a>. You'll have to use a special TOKEN which you can recieve from any of the <a href='https://knapsacks.github.io/ebullience/team/'>TEAM KNAPSACKS</a>."
+         },
+         {"no": 5,
+         "type": "all",
+         "date": "22 March",
+         "time": "11:30 PM",
+         "headline": "UPDATE IN COMMON EVENT NEED FOR SPEED",
+         "details": "Time is updated for the NEED FOR SPEED event in common category. Do check it out."
+         },
+         {"no": 6,
+         "type": "all",
+         "date": "22 March",
+         "time": "11:30 PM",
+         "headline": "UPDATE IN COMMON EVENT COUNTER STRIKES",
+         "details": "Description is updated for the Counter Strikes in common category. Do check it out."
          }
     ]
 }
