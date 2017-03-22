@@ -517,7 +517,7 @@ $(document).ready(function(){
                                 $("#year"+ x).append(options.join(""));
                             }
                             $("#event_registration_form").append(`
-                                    <input id="eventsubmit" type="submit" value="SUBMIT" class="registersubmit">
+                                    <input id="eventsubmit" type="submit" value="REGISTER" class="registersubmit">
                                     </form>`);
                         }
                         });
