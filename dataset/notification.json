@@ -33,7 +33,7 @@
          "date": "22 March",
          "time": "7:20 PM",
          "headline": "EVENT COORDINATORS CAN DOWNLOAD PARTICIPANTS LIST",
-         "details": "Event coordinators can download the participant lists from the website itself (https://knapsacks.github.io/ebullience/registration.html). You'll have to use a special TOKEN which you can recieve from any of the 'TEAM KNAPSACKS'."
+         "details": "Event coordinators can download the participant lists from the website itself by <a href='https://knapsacks.github.io/ebullience/registration.html'>CLICKING HERE</a>. You'll have to use a special TOKEN which you can recieve from any of the <a href='https://knapsacks.github.io/ebullience/team/'>TEAM KNAPSACKS</a>."
          }
     ]
 }
