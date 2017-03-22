@@ -20,6 +20,20 @@
          "time": "5:52 PM",
          "headline": "EVENTS UPDATED",
          "details": "All Events are updated and visible. And the registrations begin."
+         },
+         {"no": 3,
+         "type": "all",
+         "date": "22 March",
+         "time": "7:20 PM",
+         "headline": "SIGNUP AND LOGIN WITH EMAIL ENABLED",
+         "details": "Now you and you friends can login with email and roll no. Also inform those friends who were having trouble logging in with FB that they can register with Email also."
+         },
+         {"no": 4,
+         "type": "all",
+         "date": "22 March",
+         "time": "7:20 PM",
+         "headline": "EVENT COORDINATORS CAN DOWNLOAD PARTICIPANTS LIST",
+         "details": "Event coordinators can download the participant lists from the website itself (https://knapsacks.github.io/ebullience/registration.html). You'll have to use a special TOKEN which you can recieve from any of the 'TEAM KNAPSACKS'."
          }
     ]
 }
