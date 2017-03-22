@@ -995,9 +995,9 @@ label{
 #techfooter{
     position: fixed;
     margin: auto;
-    right: 0; left: 0; bottom: 0;
-    width: 100%; height: 3%;
-    padding: 3px;
+    right: 0; left: 0; bottom: 2px;
+    width: 100%; height: 4%;
+    padding: 2px;
     color:white;
     opacity: 0.8;
     background-color: #454545;

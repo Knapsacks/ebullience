@@ -1,81 +1,46 @@
-     <!DOCTYPE html>
-     <html>
-     <head>
-          <title>Event Registration Details</title>
-     </head>
-     <body>
-     <form name="event_details" action="https://ebullience.herokuapp.com/downloadcsv.php" method="GET">
-          Select Event: 
-          <select name="eventid" required>
-          <option value="1">So You Think You Can Do It</option>
-          <option  value="2">Business option </option >
-          <option  value="3">Fastrack</option >
-          <option  value="4">Optimization Quest</option >
-          <option  value="5">COUNTER STRIKE V1.6</option >
-          <option  value="6">Shadow and Sound Show</option >
-          <option  value="7">Need for Speed</option >
-          <option  value="8">Code Switch</option >
-          <option  value="9">ROBO RALLY</option >
-          <option  value="10">How Well You Know Them</option >
-          <option  value="11">Illustrate</option >
-          <option  value="12">ROBO WAR</option >
-          <option  value="13">Reverse Coding</option >
-          <option  value="14">Festography</option >
-          <option  value="15">Code-O-Holic:</option >
-          <option  value="16">DIY (Do It Yourself)</option >
-          <option  value="17">ZERO E- WASTE</option >
-          <option  value="18">3-D Model Modeling</option >
-          <option  value="19">COLOR FREAK</option >
-          <option  value="20">Aero- Modeling</option >
-          <option  value="21">Floatanium</option >
-          <option  value="22">BEG, BORROW AND DESIGN</option >
-          <option  value="23">MINI MILITIA TOURNAMENT</option >
-          <option  value="24">100m boys Race</option >
-          <option  value="25">100m girls</option >
-          <option  value="26">200m boys, Race</option >
-          <option  value="27">4*100 Boys</option >
-          <option  value="28">4*100 Girls</option >
-          <option  value="29">Tug of War, Boys</option >
-          <option  value="30">Tug of War, Girls</option >
-          <option  value="31">PLAN a CITY</option >
-          <option  value="32">Shot-Put, Boys</option >
-          <option  value="33">TRUSS MODELLING</option >
-          <option  value="34">HIT THE CLUE</option >
-          <option  value="35">TECHNICAL ANTAKSHARI</option >
-          <option  value="36">Chess, Boys</option >
-          <option  value="37">Table tennis,Boys</option >
-          <option  value="38">Badminton Singles, Boys</option >
-          <option  value="39">Shot-Put, Girls</option >
-          <option  value="40">Badminton doubles, Boys</option >
-          <option  value="41">Volleyball, Boys</option >
-          <option  value="42">Volleyball, Girls</option >
-          <option  value="43">Table tennis, Girls</option >
-          <option  value="44">BADMINTON SINGLES (GIRLS)</option >
-          <option  value="45">Chess, Girls</option >
-          <option  value="46">BADMINTON DOUBLES (GIRLS)</option >
-          <option  value="47">Basketball, Boys</option >
-          <option  value="48">BASKETBALL (GIRLS)</option >
-          <option  value="49">Fireless Cooking</option >
-          <option  value="50">Dark Matter- Twisted But True</option >
-          <option  value="51">Red Letter Returns</option >
-          <option  value="52">Hydraulic Lift</option >
-          <option  value="54">Chem-e-Ladder</option >
-          <option  value="55">Water Rocketry</option >
-          <option  value="56">Video Scribe</option >
-          <option  value="57">Chem-e-Exhibition</option >
-          <option  value="58">Roadies</option >
-          <option  value="59">Enviro</option >
-          <option  value="61">KARYANEETI</option >
-          <option  value="62">IDEATORS</option >
-          <option  value="63">SPELL BEE</a>
-          </select><br>
-          Token: <input name="token" placeholder="Enter Coordinator Token" required>
-          <input type="submit" value="Submit" >
-     </form>
-     <!--  <script type="text/javascript">
-                    $.each(uniqueevents, function(key, val) {
-                              console.log( val["Unique ID"] + val["Event Name"] );
-                         });
-               </script> -->
-     </body>
-     </html>
+<!DOCTYPE html>
+<html >
+  <head>
+     <meta charset="UTF-8">
+     <title>Ebullience 2k17 Archive</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
+     <link rel='stylesheet prefetch' href='http://raubarrera.neocities.org/cdpn/style.css'>              
+     <link rel="stylesheet" href="css/events.css">
+     <link rel="stylesheet" href="css/style.css">
+          <script
+       src="https://code.jquery.com/jquery-3.2.1.min.js"
+       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+       crossorigin="anonymous"></script>
+  </head>
+<body>
+  <div class="center-on-page">
+  <h1>Ebullience 2k17</h1><br><h2>Registrations Archive</h2>
+  <div class="select">
+  <form method="GET" action="https://ebullience.herokuapp.com/downloadcsv.php" name="event_details">
+    <select name="eventid" id="slct" required>
+      <option value="0">Ankit</option>
+    </select></div>
+  <div class="input">
+    <br><input type="password" name="token" placeholder="enter coordinator token" required>
+    </div><br><br><button class="button button1">Fetch</button> 
+    </form>
+    </div>
+    <a href="/ebullience/team/">
+    <div id="techfooter">
+    <center>Crafted By <strong>Team Knapsacks</strong></center>
+    </div></a>
+  <!-- Iterating JSON -->
+  <script type="text/javascript">
+       $.getJSON('dataset/uniqueevents.json', function (data) {
+                var items=[];
+                $.each(data.all, function(key, val) {
+                    items.push("<option value="+val['Unique ID']+">"+val['Event Name']+"</option>");
+                });
+                $("#slct").append(items.join(""));
+            });
+  </script>
+</body>
+</html>
