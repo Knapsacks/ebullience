@@ -1,4 +1,4 @@
-EBULLIENCE 2k17 - The annual Tech Fest
+EBULLIENCE 2k17 - The Annual Tech Fest
 
 'Ebullience', here in after referred to as 'fest', is a set of several events organized by students of different branches of Noida Institute of Enginnering and Technology. 
 

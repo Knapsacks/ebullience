@@ -435,7 +435,7 @@
     "Faculty Coordinator 2 (Name - Number)": "",
     "Branch which is conducting this": "EC",
     "Event Day": 25,
-    "Event Type": "Common"
+    "Event Type": "Technical"
   },
   {
     "Unique ID": 24,
@@ -644,7 +644,7 @@
     "Faculty Coordinator 2 (Name - Number)": "Ms. Swati",
     "Branch which is conducting this": "CIVIL",
     "Event Day": 25,
-    "Event Type": "Common"
+    "Event Type": "Technical"
   },
   {
     "Unique ID": 35,
@@ -1159,6 +1159,63 @@
     "Branch which is conducting this": "",
     "Event Day": 25,
     "Event Type": "Common"
+  },
+  {
+    "Unique ID": 64,
+    "Timestamp": "3/20/2017 21:00:59",
+    "Event Name": "POSTER MAKING",
+    "Event Description": "<b>Themes-</b><br>1)Equity Or Equality<br>2)Drug Addiction in Youngsters<br>3)Technology Addiction",
+    "Team Event ?": "Yes",
+    "No Of Team Members (just enter no)": 3,
+    "Event Time Hour (24 Hrs)": 14,
+    "Event Time Minutes": 0,
+    "Event Block (Building)": "C",
+    "Event Room (just enter no)": 403,
+    "Student Coordinator 1 (Name - Number)": "Neeraj Rana - 9720809004",
+    "Student Coordinator 2 (Name - Number)": "",
+    "Faculty Coordinator 1 (Name - Number)": "",
+    "Faculty Coordinator 2 (Name - Number)": "",
+    "Branch which is conducting this": "PHARMACY",
+    "Event Day": 24,
+    "Event Type": "Technical"
+  },
+  {
+    "Unique ID": 65,
+    "Timestamp": "3/20/2017 21:00:59",
+    "Event Name": "QUIZ",
+    "Event Description": "A multiple rount quiz. Contact coordinators to know more.",
+    "Team Event ?": "Yes",
+    "No Of Team Members (just enter no)": 2,
+    "Event Time Hour (24 Hrs)": 10,
+    "Event Time Minutes": 0,
+    "Event Block (Building)": "C",
+    "Event Room (just enter no)": 403,
+    "Student Coordinator 1 (Name - Number)": "Neeraj Rana - 9720809004",
+    "Student Coordinator 2 (Name - Number)": "Anjali Jaiswal (3rd year)",
+    "Faculty Coordinator 1 (Name - Number)": "",
+    "Faculty Coordinator 2 (Name - Number)": "",
+    "Branch which is conducting this": "PHARMACY",
+    "Event Day": 24,
+    "Event Type": "Technical"
+  },
+  {
+    "Unique ID": 66,
+    "Timestamp": "3/20/2017 21:00:59",
+    "Event Name": "PLAYING WITH COLOURS",
+    "Event Description": "<b>Themes-</b><br>1)Nail Art<br>2)Rainbow on Milk<br>3)T-shirt Painting",
+    "Team Event ?": "Yes",
+    "No Of Team Members (just enter no)": 2,
+    "Event Time Hour (24 Hrs)": 10,
+    "Event Time Minutes": 0,
+    "Event Block (Building)": "C",
+    "Event Room (just enter no)": 403,
+    "Student Coordinator 1 (Name - Number)": "Neeraj Rana - 9720809004",
+    "Student Coordinator 2 (Name - Number)": "Jagmohan Singh",
+    "Faculty Coordinator 1 (Name - Number)": "",
+    "Faculty Coordinator 2 (Name - Number)": "",
+    "Branch which is conducting this": "PHARMACY",
+    "Event Day": 25,
+    "Event Type": "Technical"
   }
 ]
 }
