@@ -55,6 +55,13 @@
          "time": "1:00 PM",
          "headline": "REGARDING REGISTRATIONS",
          "details": "In case of multiple entries only the latest will be kept and other will be discarded."
+         },
+         {"no": 8,
+         "type": "all",
+         "date": "23 March",
+         "time": "5:46 PM",
+         "headline": "PHARMACY EVENTS ADDED",
+         "details": "Events by Pharmacy has been added to the 'EVENTS' > 'TECHNICAL' > 'PHARMACY' section. Go check it out."
          }
     ]
 }
