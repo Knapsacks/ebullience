@@ -188,7 +188,7 @@ $("#signup").submit(function(event) {
                                                           $('#signupsubmitwait').replaceWith('<button id="signupsubmit"type="submit" class="button button-block"/>Get Started</button>');
                                                       }
                                                       else{
-                                                          setCookie("email", formdata[0].value,100);
+                                                          setCookie("name", formdata[0].value,100);
                                                           setCookie("email", formdata[1].value,100);
                                                           setCookie("phone", formdata[3].value,100);
                                                           setCookie("rollno", formdata[2].value,100);
