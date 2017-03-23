@@ -465,6 +465,7 @@ $(document).ready(function(){
                                     <div id="unique_event_id">`+ id +`</div>
                                     <h2>Register For `+ val["Event Name"] +`</h2>
                                     <p>This is event require `+ val["No Of Team Members (just enter no)"] +` maximum people. First member is always submitted with your name by default.</p>
+                                    <p style="color: red"><b>In case of multiple entries only latest one will be kept and other will be discarded.</b></p>
                                     <h4><b>Member Number 1</b></h4>
                                     Name - ` + getCookie('name') + `<br>
                                     Email - ` + getCookie('email') + `<br>

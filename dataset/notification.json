@@ -48,6 +48,13 @@
          "time": "11:30 PM",
          "headline": "UPDATE IN COMMON EVENT COUNTER STRIKES",
          "details": "Description is updated for the Counter Strikes in common category. Do check it out."
+         },
+         {"no": 7,
+         "type": "all",
+         "date": "23 March",
+         "time": "1:00 PM",
+         "headline": "REGARDING REGISTRATIONS",
+         "details": "In case of multiple entries only the latest will be kept and other will be discarded."
          }
     ]
 }
