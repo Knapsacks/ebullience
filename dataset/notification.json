@@ -62,6 +62,13 @@
          "time": "5:46 PM",
          "headline": "PHARMACY EVENTS ADDED",
          "details": "Events by Pharmacy has been added to the 'EVENTS' > 'TECHNICAL' > 'PHARMACY' section. Go check it out."
+         },
+        {"no": 9,
+         "type": "all",
+         "date": "23 March",
+         "time": "5:46 PM",
+         "headline": "HOW WELL YOU KNOW THEM EVENT DATE CHANGED",
+         "details": "Date of the event How Well You Know Them has been changed from 24 to 25"
          }
     ]
 }
