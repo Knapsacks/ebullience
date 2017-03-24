@@ -90,6 +90,20 @@
          "time": "2:33 AM",
          "headline": "FUL SCHEDULE",
          "details": "Download entire schedule from the 'EVENTS' page. All The Best for the event."
+         },
+        {"no": 13,
+         "type": "all",
+         "date": "23 March",
+         "time": "6:30 PM",
+         "headline": "HOW WELL YOU KNOW THEM EVENT DATE CHANGED",
+         "details": "Date of the event How Well You Know Them has been changed from 24 to 25"
+         },
+        {"no": 14,
+         "type": "all",
+         "date": "24 March",
+         "time": "8:30 AM",
+         "headline": "REGISTRATIONS CLOSED",
+         "details": "Registrations culminated. The fest commences. All the best to all participants!"
          }
     ]
 }
