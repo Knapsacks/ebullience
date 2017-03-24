@@ -69,6 +69,13 @@
          "time": "6:30 PM",
          "headline": "HOW WELL YOU KNOW THEM EVENT DATE CHANGED",
          "details": "Date of the event How Well You Know Them has been changed from 24 to 25"
+         },
+        {"no": 10,
+         "type": "all",
+         "date": "24 March",
+         "time": "8:30 AM",
+         "headline": "REGISTRATIONS CLOSED",
+         "details": "Registrations culminated. The fest commences. All the best to all participants!"
          }
     ]
 }
