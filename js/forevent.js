@@ -429,7 +429,7 @@ $(document).ready(function(){
                                 check=1;
                                 items.push(`<div>
                                 <hr>
-                                <h3><b>`+ val["Event Name"] +` - <span id=register`+ id +` class='event_register_button'>REGISTER</span></b></h3>
+                                <h3><b>`+ val["Event Name"] +` - <span style="color:red"><b>REGISTRATION CLOSED</b></span></b></h3>
                                 <h4><b>Team Event</b> - `+ val["Team Event ?"] +`</h4>
                                 <h4><b>No Of Maximum Members</b> - `+ val["No Of Team Members (just enter no)"] +`</h4>
                                 <h4><b>Event Day</b> - `+ val["Event Day"] +`</h4>
