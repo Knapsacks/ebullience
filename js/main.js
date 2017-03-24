@@ -3,9 +3,9 @@ $(document).ready(function(){
 		alert('Please Enable Cookie and Visit Us Again');
 		window.location="http://www.wikihow.com/Enable-Cookies-in-Your-Internet-Web-Browser.html";
 	}
-	setTimeout(preloader_magic, 2500);
+	setTimeout(preloader_magic, 2000);
 	//setTimeout(flyby, 21775);
-	setTimeout(show_login, 14000);
+	setTimeout(show_login, 6000);
 	//setTimeout(registerbox, 22150);
 	
 	function preloader_magic(){
