@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html >
+  <head>
+     <meta charset="UTF-8">
+     <title>LoudSpeaker - Ebullience 2k17</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
+     <link rel='stylesheet prefetch' href='http://raubarrera.neocities.org/cdpn/style.css'>              
+     <link rel="stylesheet" href="css/events.css">
+     <link rel="stylesheet" href="css/style.css">
+          <script
+       src="https://code.jquery.com/jquery-3.2.1.min.js"
+       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+       crossorigin="anonymous"></script>
+  </head>
+<body>
+  <div class="center-on-page">
+  <h1>Ebullience 2k17</h1><br><h2>LoudSpeaker</h2>
+  <div class="select">
+  <form id="result">
+    <select name="eventid" id="slct" required>
+      <option value="0">Select Event</option>
+    </select></div>
+  <div class="input">
+    <br><input type="number" name="winner" placeholder="enter roll no of winner" required>
+    <br><input type="number" name="firstrunner" placeholder="roll no of first runner up" required>
+    <br><input type="number" name="secondrunner" placeholder="roll no of first runner up" required>
+    <br><input type="password" name="token" placeholder="enter coordinator token" required>
+    </div><br><button id="submit" type="submit" class="button button1">Publish</button>
+    </form>
+    </div></div>
+    <a href="/ebullience/team/">
+    <div id="techfooter">
+    <center>Crafted By <strong>Team Knapsacks</strong></center>
+    </div></a>
+  <!-- Iterating JSON -->
+  <script type="text/javascript">
+       $.getJSON('dataset/uniqueevents.json', function (data) {
+                var items=[];
+                $.each(data.all, function(key, val) {
+                    items.push("<option value="+val['Unique ID']+">"+val['Event Name']+"</option>");
+                });
+                $("#slct").append(items.join(""));
+            });
+
+            $("#result").submit(function(event) {
+                $('#submit').replaceWith('<h4 style="color:red" id="signupsubmitwait"><b>PLEASE WAIT</b></h4>');
+                var formdata=$('#result').serializeArray();
+                //console.log(formdata);
+                $.ajax({
+                        url:"https://ebullience.herokuapp.com/loudspeaker.php",
+                        data:{
+                            "eventid": formdata[0].value,
+                            "winner": formdata[1].value,
+                            "firstrunner": formdata[2].value,
+                            "secondrunner": formdata[3].value,
+                            "token": formdata[4].value,
+                        },
+                        cache: false,
+                        dataType: 'jsonp',
+                        success:function(json){
+                            console.log(json);
+                            if(json['error']!=0){
+                                  $('#signupsubmitwait').replaceWith('<button id="submit" type="submit" class="button button1">Publish</button>');
+                                  alert('Please Try Again Later');
+                            }
+                            else if($arr['unique']!=1){
+                                  $('#signupsubmitwait').replaceWith('<button id="submit" type="submit" class="button button1">Publish</button>');
+                                  alert("INVALID TOKEN");
+                            }
+                            else if($arr['success']!=1){
+                                  $('#signupsubmitwait').replaceWith('<button id="submit" type="submit" class="button button1">Publish</button>');
+                                  alert("DUCPLICATE ENTRY CANNOT BE DONE");
+                            }
+                        },
+                        error:function(){
+                                          $('#signupsubmitwait').replaceWith('<button id="submit" type="submit" class="button button1">Publish</button>');
+                            alert("Please Try Again Later!");
+                        }      
+                    });
+                event.preventDefault();
+            });
+  </script>
+</body>
+</html>
