@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeaderBoard - Ebullience 2k17</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script
+       src="https://code.jquery.com/jquery-3.2.1.min.js"
+       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+       crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    function switch_pod(){
+      document.getElementById('events').style.display = "none";
+      document.getElementById('podium').style.display = "block";
+    }
+  </script>
+       <link rel="stylesheet" href="css/style.css">
+  <style type="text/css">
+    #techfooter{
+    position: fixed;
+    margin: auto;
+    right: 0; left: 0; bottom: 1px;
+    width: 100%; height: 4%;
+    padding: 2px;
+    color:white;
+    opacity: 0.8;
+    background-color: #454545;
+    word-wrap: break-word;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+    #podium{
+      display: none;
+      background: #f2f2f2;
+      border: 3px solid #494949;
+      border-radius: 5px;
+      height: 400px;
+      width: 600px;
+      opacity: .9;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+    }
+    #block{
+      margin-top: 8px;
+      margin-left: 50px;
+      padding: 5px;
+      border: 2px solid #494949;
+      width: 475px;
+      height: 100px;
+      border-radius: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+<div id="events">
+<div class="center-on-page">
+<div class="select" id="select">
+  <form method="GET" action="#" name="winner">
+    <select name="eventid" id="slct" required>
+      <option value="0">Select Event</option>
+    </select>
+    </div></form>
+    <br><button class="button button1" onclick="switch_pod();">Check</button>
+    </div>
+    </form>
+  </div>
+<div id="podium">
+  <div id="block">
+    first
+  </div>
+  <div id="block">
+    second
+  </div>
+  <div id="block">
+    third
+  </div>
+</div>
+<a href="/ebullience/team/">
+    <div id="techfooter">
+    <center>Crafted By <strong>Team Knapsacks</strong></center>
+    </div></a>
+<script type="text/javascript">
+       $.getJSON('dataset/uniqueevents.json', function (data) {
+                var items=[];
+                $.each(data.all, function(key, val) {
+                    items.push("<option value="+val['Unique ID']+">"+val['Event Name']+"</option>");
+                });
+                $("#slct").append(items.join(""));
+            });
+  </script>
+</body>
+</html>
