@@ -5,7 +5,7 @@ $(document).ready(function(){
 	}
 	setTimeout(preloader_magic, 2000);
 	//setTimeout(flyby, 21775);
-	setTimeout(show_login, 6000);
+	setTimeout(show_login, 10000);
 	//setTimeout(registerbox, 22150);
 	
 	function preloader_magic(){
