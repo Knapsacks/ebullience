@@ -45,7 +45,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('EBULLIENCE | 2k17 | 1200+ | USERS | 3100+ | REGISTRATIONS | 17000+ | VISITS | GAME BEGINS | EBULLIENCE');
+      S.UI.simulate('EBULLIENCE|2k17|CRAFTED BY|KNAPSACKS');
     }
     S.Drawing.loop(function () {
       S.Shape.render();
