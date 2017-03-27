@@ -45,7 +45,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('EBULLIENCE|2k17|CRAFTED BY|KNAPSACKS');
+      S.UI.simulate('EBULLIENCE|2k17||KNAPSACK');
     }
     S.Drawing.loop(function () {
       S.Shape.render();
